@@ -3,9 +3,18 @@ body{
     padding: 0;
 }
 
+#divdrop-container{
+    margin: 0 auto;
+    height: 350px;
+    width: 980px;
+    border: 1px solid red;
+    overflow: hidden;
+    position: relative;
+}
+
 #piano-container{
     position: relative; /* for child elements to use relazive sizing (%) */
-    margin: 10% auto; /* horizontal middle, 10% from top */
+    margin: 0 auto; /* horizontal middle, 10% from top */
     /* possibly add min and max and make responsive */
     height: 210px; 
     width: 980px;
@@ -46,4 +55,11 @@ body{
     flex-grow: 1;
     height: 100%;
     pointer-events: none; /* click on white key THROUGH spacer */
+}
+
+#notedrop-canvas{
+    display: block;
+    margin: 0 auto;
+    width: 980px;
+    height: 210px;
 }
