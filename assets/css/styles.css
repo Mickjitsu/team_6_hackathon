@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#piano-container{
+    position: relative; /* for child elements to use relazive sizing (%) */
+    margin: 10% auto; /* horizontal middle, 10% from top */
+    /* possibly add min and max and make responsive */
+    height: 210px; 
+    width: 980px;
+}
+
+/* white piano keys as 14 same divs in a row */
+#white-key-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.white-key{
+    flex-grow: 1;
+    border: 2px solid black;
+    border-radius: 0 0 7px 7px;
+    box-shadow: 0 1px 1px black
+}
+
+/* black keys overlay white keys */
+#black-key-container{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60%;
+}
+
+.black-key{
+    flex-grow: 1.5;
+    height: 100%;
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+}
+
+.spacer{
+    flex-grow: 1;
+    height: 100%;
+    pointer-events: none; /* click on white key THROUGH spacer */
+}
