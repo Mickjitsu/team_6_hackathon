@@ -102,4 +102,12 @@ test
 
 ##### Acknowledgements
 
+<<<<<<< HEAD
+
 ##### Comments
+
+=======
+
+##### Comments
+>>>>>>>
+>>>>>>> 36bde1cc2705233ac6b6dbebd977a4bf66684390
