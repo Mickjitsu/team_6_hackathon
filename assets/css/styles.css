@@ -3,6 +3,14 @@ body {
     padding: 0;
 }
 
+div {
+    transition: all 500ms;
+}
+
+#piano-container{
+    position: relative; /* for child elements to use relazive sizing (%) */
+    margin: 0 auto; /* horizontal middle, 10% from top */
+=======
 
 /* Piano Page */
 .btn-pianoPage {
@@ -122,6 +130,18 @@ body {
 .spacer {
     flex-grow: 1;
     height: 100%;
+    pointer-events: none; /* click on white key THROUGH spacer */
+}
+
+#notedrop-canvas{
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+=======
     pointer-events: none;
     /* click on white key THROUGH spacer */
 }
