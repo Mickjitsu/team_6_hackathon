@@ -259,6 +259,37 @@ li.dropdown {
     display: block;
 }
 
+/* Practice Mode */
+#play-demo {
+
+}
+
+#play-along {
+
+}
+
+#message {
+
+}
+
+#missed-notes {
+
+}
+
+
+.white-key.highlight {
+    background-color: rgb(199, 82, 199); 
+}
+
+.white-key.correct {
+    background-color: rgb(160, 241, 160);
+}
+
+.white-key.incorrect {
+    background-color: rgb(239, 137, 137); 
+}
+
+
 @media (max-width: 820px) {
 
     .active {
