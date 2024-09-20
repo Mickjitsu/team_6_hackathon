@@ -3,13 +3,8 @@ body{
     padding: 0;
 }
 
-#divdrop-container{
-    margin: 0 auto;
-    height: 350px;
-    width: 980px;
-    border: 1px solid red;
-    overflow: hidden;
-    position: relative;
+div {
+    transition: all 500ms;
 }
 
 #piano-container{
@@ -60,6 +55,9 @@ body{
 #notedrop-canvas{
     display: block;
     margin: 0 auto;
-    width: 980px;
-    height: 210px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
 }
