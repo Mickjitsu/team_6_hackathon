@@ -132,6 +132,7 @@ a.active {
 .wrong-key {
   background-color: #b92727;
 }
+
 /* black keys overlay white keys */
 #black-key-container {
   position: absolute;
@@ -163,6 +164,26 @@ footer {
   width: 100%;
   text-align: center;
   margin-top: auto;
+}
+
+/* Note Labels for Practice Keyboard */
+.white-key, .black-key {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-end; 
+}
+
+.note-label {
+  color: #3d2617; 
+}
+
+.white-key .note-label {
+  margin-bottom: 5px; 
+}
+
+
+.black-key .note-label {
+  color: #bdb2a0; 
 }
 
 @media (max-width: 500px) {
