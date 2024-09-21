@@ -1,5 +1,10 @@
 const ctxElement = document.getElementById("notedrop-canvas");
 const canvas = ctxElement.getContext("2d");
+const colorDarkBrown = "#3d2617";
+const colorBackground = "#bdb2a0";
+
+canvas.strokeStyle = colorDarkBrown;
+canvas.fillStyle = colorDarkBrown;
 
 /* x position determines note
    y determines note order/timing 
@@ -45,9 +50,6 @@ function setNotes(){
  * move all notes down a pixel then draw them
  */
 function moveDown(){
-    canvas.strokeStyle = "darkgreen";
-    canvas.fillStyle = "green";
-    
     for(let note of twinkleStar){
         note.y++; 
 
@@ -58,15 +60,19 @@ function moveDown(){
             canvas.stroke();
             canvas.fill();
             //get note's matching keyboard key div
-            let key = (note.x / 70);
+            let key = note.x / 70;
             let temp = document.getElementById("white-key-container").children[key];
         
-            //if note is to be played now (touching bottom of canvas/top of keyboard) make top of key green
+            //if note is to be played now (touching bottom of canvas/top of keyboard)
             if (note.y + note.length > ctxElement.height && note.y < ctxElement.height) {
-                temp.style.borderTop = "5px solid lightgreen"; 
+                temp.style.boxShadow = `0 -3px 15px wheat`;
+                temp.style.border = `2px solid ${colorBackground}`;
             }
-            //if note has just ended remove green from top of key
-            if (note.y == ctxElement.height) temp.style.borderTop = ""; 
+            //if note has just ended
+            if (note.y == ctxElement.height) {
+                temp.style.boxShadow = "";
+                temp.style.border = "";
+            }  
         }
     }
 }

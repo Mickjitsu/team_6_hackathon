@@ -99,7 +99,7 @@ a.active {
 }
 
 #piano-container div {
-  transition: all 600ms;
+  transition: all 300ms;
 }
 
 /* white piano keys as 14 same divs in a row */
