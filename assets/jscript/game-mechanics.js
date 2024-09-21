@@ -1,3 +1,4 @@
+/* global variables */
 const ctxElement = document.getElementById("notedrop-canvas");
 const canvas = ctxElement.getContext("2d");
 const colorDarkBrown = "#3d2617";
@@ -6,13 +7,16 @@ const colorBackground = "#bdb2a0";
 canvas.strokeStyle = colorDarkBrown;
 canvas.fillStyle = colorDarkBrown;
 
-var allKeys = {};
-var currentSongNotes = [];
-var blackNotes = [];
-/* x position determines note
-   y determines note order/timing 
-   width determined by note type (black or white)
-   length is note duration
+var allKeys = {}; //to contain keyboard key coordinates
+var currentSongNotes = []; //to contain notes for gameplay
+var blackNotes = []; //to contain 
+
+/* x - coordinate in canvas
+   y - coordinate in canvas
+   isWhite - width determined by note type (black or white)
+   length - note duration (canvas rectangle height)
+   playThis to contain note audio for possible autoplay
+   key - "data-key" attribute value for corresponding key on keyboard
 */
    class noteTemplate {
     isWhite = null;
@@ -20,6 +24,7 @@ var blackNotes = [];
     x = 0;
     y = 0;
     length = 0;
+    playThis = null;
 }
 /**
  * sets "allKeys{}" as 'data-key attribute': x coordinate
@@ -49,11 +54,14 @@ function determineNoteType(note){
     return true;
 }
 /**
- * changes value of each element from 
- * received array by received change amount
+ * converts array elements to string and adds
+ * 0 as prefix if number is < 10
  */
-function changeMusicKey(array, change){
-    for (let i=0; i<array.length; i++) array[i] += change;
+function setNoteArray(array){
+    for(let i=0; i<array.length; i++){
+        if (array[i] < 10) array[i] = "0" + array[i];
+        else array[i] = array[i].toString();
+    }
 }
 /**
  * returnes width of received note in pixels 
@@ -79,16 +87,23 @@ function moveDown(){
             canvas.fill();
             //get note's matching keyboard key div
             let temp = document.querySelector(`[data-key=${note.key}]`);
-        
+
             //if note is to be played now (touching bottom of canvas/top of keyboard)
             if (note.y + note.length > ctxElement.height && note.y < ctxElement.height) {
                 temp.style.boxShadow = `0 -3px 15px wheat`;
                 
                 if(note.isWhite) temp.style.border = `2px solid ${colorBackground}`
                 else temp.style.outline = `2px solid wheat`;
+            
+                //play the note during composing
+                if(!note.playThis) {
+                    note.playThis = new Audio(`./assets/sounds/piano-notes/${note.key}.ogg`);
+                    note.playThis.play();
+                }
+                if (note.playThis.currentTime > 0.5) note.playThis.play();
             }
             //if note has just ended
-            if (note.y == ctxElement.height) {
+            if (note.y >= ctxElement.height) {
                 temp.style.boxShadow = "";
                 temp.style.border = "";
                 temp.style.outline = "";
@@ -102,10 +117,6 @@ function drawSong(){
     moveDown(); 
     // if last note didn't pass through canvas repeat this function every frame
     if(currentSongNotes[currentSongNotes.length - 1].y <= ctxElement.height) requestAnimationFrame(drawSong);
-}
-
-function devTest(){
-    
 }
 
 document.onload = setAllKeys();
