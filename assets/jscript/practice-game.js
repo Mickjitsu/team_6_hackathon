@@ -18,6 +18,34 @@ function checkKey(key) {
     'key15',
     'key15',
     'key13',
+    'key20',
+    'key20',
+    'key18',
+    'key18',
+    'key17',
+    'key17',
+    'key15',
+    'key20',
+    'key20',
+    'key18',
+    'key18',
+    'key17',
+    'key17',
+    'key15',
+    'key13',
+    'key13',
+    'key20',
+    'key20',
+    'key22',
+    'key22',
+    'key20',
+    'key18',
+    'key18',
+    'key17',
+    'key17',
+    'key15',
+    'key15',
+    'key13'
   ];
 
   userInputArr.push(key);
@@ -68,3 +96,20 @@ function initialSetup() {
   }
 }
 document.onload = initialSetup();
+
+/**
+ * Prompts user with the next key to push 
+ */
+
+function showNextKey() {
+  if (currentKeyIndex < keys.length) {
+      const nextKey = keys[currentKeyIndex];
+      const nextKeyElement = document.querySelector(`[data-key=${nextKey}]`);
+
+      nextKeyElement.classList.add('highlight-next');
+
+      setTimeout(() => {
+        nextKeyElement.classList.remove('highlight-next');
+    }, 1000);
+  }
+}
