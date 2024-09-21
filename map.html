@@ -9,6 +9,12 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Map scritp and style-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -47,7 +53,79 @@
             </div>
         </nav>
     </header>
-
+    <main>
+        <div class="page-container">
+            <div class="container map-welcome">
+                <div class="row justify-content-center">
+                    <div class="map-welcome-content">
+                        <h1>Discover the Rich Tapestry of Musical History</h1>
+                        <p>Welcome to our interactive journey through musical history! Here, you can explore the lives
+                            and legacies of
+                            legendary composers from around the world.
+                            Simply select a composer from the map, and delve into their fascinating story,
+                            notable works, and the cultural impact they’ve had on music. Join us in celebrating
+                            the artistry that has shaped the soundscape of our lives!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="map-info">
+                <div class="map-group">
+                    <div class="row map-row">
+                        <div class="col-md-2 col-sm-4 history-list">
+                            <div class="list-content">
+                                <ul>
+                                    <li id="johan">Johann Sebastian Bach</li>
+                                    <li id="beethoven">Ludwig van Beethoven</li>
+                                    <li id="mozart">Wolfgang Amadeus Mozart</li>
+                                    <li id="chopin">Frédéric Chopin</li>
+                                    <li id="pyotr">Pyotr Ilyich Tchaikovsky</li>
+                                    <li id="wagner">Richard Wagner </li>
+                                    <li id="debussy">Claude Debussy</li>
+                                    <li id="igor">Igor Stravinsky</li>
+                                    <li id="brahms">Johannes Brahms</li>
+                                    <li id="mahler">Gustav Mahler</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div id="map"></div>
+                        </div>
+                        <div class="col-lg-3 extra-information hidden">
+                            <div class="composer">
+                                <div class="historical-image">
+                                    <img src="assets/images/beethoven.jpg">
+                                </div>
+                                <p id="artist-from">From:
+                                </p>
+                                <p id="artist-birth">
+                                    Born:
+                                </p>
+                                <p id="artist-death">
+                                    Died:
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container life-history hidden">
+                        <div class="personal-history">
+                            <h3>Personal History</h3>
+                            <p class="personal-paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                                cillum dolore eu fugiat nulla pariatur. 
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        </div>
+                        <div class="musical-history">
+                            <h3>Musical Influence</h3>
+                            <p class="musican-influence">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                                cillum dolore eu fugiat nulla pariatur. 
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer class="text-center text-lg-start" id="footer">
         <div class="text-center copyright">
             <p class="mb-0">&copy; Copyright Hackathon Project, Team: Challenged Composers <a href="https://github.com"
@@ -56,7 +134,8 @@
                     GitHub</a></p>
         </div>
     </footer>
-
+     <!-- Map JS-->
+     <script src="assets/jscript/map.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

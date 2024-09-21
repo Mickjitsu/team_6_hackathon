@@ -18,7 +18,8 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark header-nav">
             <div class="container">
-                <a href="index.html" class="navbar-brand">PianoMaster</a>
+                <a href="index.html" class="navbar-brand"><img class="logo" src="./assets/images/logow.png"
+                        alt="Piano logo">PianoMaster</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -50,88 +51,78 @@
     <main>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-6 d-flex justify-content-center my-3">
-                    <div class="col-12">
+                <div class="col-10 text-center notes-container">
+                    <div class="background-notes">
+                        <h3 class="key-notes">
+                        </h3>
+                    </div>
+                </div>
+                <div class="row">
 
-                        <div class="row justify-content-center">
-                            <div class="col-10 text-center notes-container">
-                                <h3>C, C, G, G, A, A, G </h3>
-                                <h3>F, F, E, E, D, D, C </h3>
+                    <div class="col-12">
+                        <div id="piano-container">
+                            <div id="black-key-container">
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                                <div class="black-key" data-key="key02"></div>
+                                <div class="spacer"></div>
+                                <div class="black-key" data-key="key04"></div>
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                                <div class="black-key" data-key="key07"></div>
+                                <div class="spacer"></div>
+                                <div class="black-key" data-key="key09"></div>
+                                <div class="spacer"></div>
+                                <div class="black-key" data-key="key11"></div>
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                                <div class="black-key" data-key="key14"></div>
+                                <div class="spacer"></div>
+                                <div class="black-key" data-key="key16"></div>
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                                <div class="black-key" data-key="key19"></div>
+                                <div class="spacer"></div>
+                                <div class="black-key" data-key="key21"></div>
+                                <div class="spacer"></div>
+                                <div class="black-key" data-key="key23"></div>
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
                             </div>
 
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-                <div class="col-12">
-                    <div id="piano-container">
-                        <div id="black-key-container">
-                            <div class="spacer"></div>
-                            <div class="spacer"></div>
-                            <div class="black-key" data-key="key02"></div>
-                            <div class="spacer"></div>
-                            <div class="black-key" data-key="key04"></div>
-                            <div class="spacer"></div>
-                            <div class="spacer"></div>
-                            <div class="spacer"></div>
-                            <div class="spacer"></div>
-                            <div class="black-key" data-key="key07"></div>
-                            <div class="spacer"></div>
-                            <div class="black-key" data-key="key09"></div>
-                            <div class="spacer"></div>
-                            <div class="black-key" data-key="key11"></div>
-                            <div class="spacer"></div>
-                            <div class="spacer"></div>
-                            <div class="spacer"></div>
-                            <div class="spacer"></div>
-                            <div class="black-key" data-key="key14"></div>
-                            <div class="spacer"></div>
-                            <div class="black-key" data-key="key16"></div>
-                            <div class="spacer"></div>
-                            <div class="spacer"></div>
-                            <div class="spacer"></div>
-                            <div class="spacer"></div>
-                            <div class="black-key" data-key="key19"></div>
-                            <div class="spacer"></div>
-                            <div class="black-key" data-key="key21"></div>
-                            <div class="spacer"></div>
-                            <div class="black-key" data-key="key23"></div>
-                            <div class="spacer"></div>
-                            <div class="spacer"></div>
-                        </div>
-
-                        <div id="white-key-container">
-                            <div class="white-key" data-key="key01"></div>
-                            <div class="white-key" data-key="key03"></div>
-                            <div class="white-key" data-key="key05"></div>
-                            <div class="white-key" data-key="key06"></div>
-                            <div class="white-key" data-key="key08"></div>
-                            <div class="white-key" data-key="key10"></div>
-                            <div class="white-key" data-key="key12"></div>
-                            <div class="white-key" data-key="key13"></div>
-                            <div class="white-key" data-key="key15"></div>
-                            <div class="white-key" data-key="key17"></div>
-                            <div class="white-key" data-key="key18"></div>
-                            <div class="white-key" data-key="key20"></div>
-                            <div class="white-key" data-key="key22"></div>
-                            <div class="white-key" data-key="key24"></div>
+                            <div id="white-key-container">
+                                <div class="white-key" data-key="key01">C</div>
+                                <div class="white-key" data-key="key03">D</div>
+                                <div class="white-key" data-key="key05">E</div>
+                                <div class="white-key" data-key="key06">F</div>
+                                <div class="white-key" data-key="key08">G</div>
+                                <div class="white-key" data-key="key10">A</div>
+                                <div class="white-key" data-key="key12">B</div>
+                                <div class="white-key" data-key="key13">C</div>
+                                <div class="white-key" data-key="key15">D</div>
+                                <div class="white-key" data-key="key17">E</div>
+                                <div class="white-key" data-key="key18">F</div>
+                                <div class="white-key" data-key="key20">G</div>
+                                <div class="white-key" data-key="key22">A</div>
+                                <div class="white-key" data-key="key24">B</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-        </div>
     </main>
 
-    <footer class="text-center text-lg-start" id="footer">
+    <footer class="text-center text-lg-start py-4" id="footer">
         <div class="text-center copyright">
-            <p class="mb-0">&copy; Copyright Hackathon Project, Team: Challenged Composers <a href="https://github.com"
-                    target="_blank" class="me-4 text-reset text-decoration-none" aria-label="Link to GitHub">
+            <p class="mb-0">&copy; Copyright Hackathon Project, Team: Challenged Composers <a
+                    href="https://github.com/Mickjitsu/team_6_hackathon" target="_blank"
+                    class="me-4 text-reset text-decoration-none" aria-label="Link to GitHub">
                     <i class="fab fa-github"></i>
                     GitHub</a></p>
         </div>
