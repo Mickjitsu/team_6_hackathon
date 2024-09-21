@@ -166,7 +166,7 @@ footer {
   margin-top: auto;
 }
 
-/* Note Labels for Practice Keyboard */
+/* Note Labels for Practice Keyboard ------------------------------------- */
 .white-key, .black-key {
   display: flex;
   justify-content: center; 
@@ -189,6 +189,106 @@ footer {
 .highlight-next {
   border: 2px solid pink;
 }
+
+/* About Us ------------------------------------------------------------ */
+
+/* Font size - About us */
+
+.team-member-wrapper h2,
+.card-body h2 {
+  font-size: 1em;
+}
+
+.card-body h3 {
+    font-size: 0.8em;
+}
+
+/* Different Style - About us */
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  color: var(--white);
+}
+
+.info-box h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.info-box p {
+  margin: 5px 0 0;
+  font-size: 0.9em;
+}
+
+/* Flipping Cards - About us */
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; /* 3D effect */
+}
+  
+  /* Container to position front and back side - About us*/
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+  
+/* Horizontal flip on hover and active */
+.flip-card:hover .flip-card-inner,
+.flip-card:active .flip-card-inner {
+  transform: rotateY(180deg);
+}
+  
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+  
+  /* Front side (fallback if image is missing) - About us */
+.flip-card-front {
+    background-color: transparent;
+}
+  
+  /* Style the back side */
+.flip-card-back {
+  transform: rotateY(180deg);
+  color: var(--white);
+  background: var(--darkbrown);
+  box-shadow: 1px -1px 7px 0 #b8a99748;
+}
+
+.flip-card a {
+  color: var(--white);
+}
+
+/* Media Queries ------------------------------------------------------------ */
 
 @media (max-width: 500px) {
   #hero-image {
