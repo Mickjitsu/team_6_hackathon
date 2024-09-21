@@ -89,6 +89,115 @@ a.active {
   color: var(--white);
 }
 
+/*MAP PAGE*/
+/*Map page*/
+.page-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.map-info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.map-group{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.map-row{
+  width:100%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#map{
+  height: 400px;
+  width: 100%;
+  border-radius: 15px;
+}
+.map-welcome{
+  color: var(--white);
+  border-radius: 15px;
+  margin-top: 20px;
+  width: 80%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: auto;
+  flex: 1;
+} 
+.map-welcome-content{
+  text-align: center;
+}
+
+.history-list{
+  height: 400px;
+  box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+-webkit-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+-moz-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+  background-color:rgba(61, 38, 23, 0.6);
+  border-radius: 15px;
+  margin-bottom:20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: scroll;
+  color: var(--white);
+
+}
+.list-content{
+  text-align: left;
+  color: antiquewhite;
+}
+
+.personal-history{
+  text-align: left;
+}
+
+.musical-history{
+  text-align: right;
+}
+
+.composer{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 100%;
+  overflow: scroll;
+}
+
+.historical-image{
+  padding: 0;
+  margin-bottom: 20px;
+}
+.historical-image > img{
+  height: 100%;
+  width: 100%;
+  border-radius: 5%;
+}
+
+/* Div that is dynamicall shown along the right hand side*/
+.extra-information{
+  border: 2px solid black;
+  margin-left: 20px;
+  background-color:rgba(61, 38, 23, 0.6);
+  border-radius: 15px;
+  overflow: scroll;
+  color: var(--white);
+  box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+-webkit-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+-moz-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+}
+
+.hidden{
+  display:none;
+}
+
 /* Piano */
 
 /* !!! Please use more specific selector !!! */
@@ -261,6 +370,12 @@ footer {
   }
 }
 
+@media (max-width: 579px){
+  .history-list, .history{
+      display:none;
+  }
+}
+
 @media (max-width: 700px) {
   #hero-image {
     height: 280px;
@@ -268,6 +383,15 @@ footer {
 
   .hero-text-container h1 {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 991px){
+  .historical-image, .extra-information{
+      display:none;
+  }
+  .contained{
+      flex: 0 1 calc(50% - 10px);
   }
 }
 
