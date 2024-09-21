@@ -120,12 +120,19 @@ a.active {
   background-color: var(--white);
 }
 
+/* Shadow to active key */
+.white-key:active {
+  border-bottom: 1px solid #999;
+  box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1) inset,
+    -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fff 0%, #e9e9e9 100%);
+}
+
 .correct-key {
   background-color: #32a24c;
 }
 
 .notes-container {
-  height: 300px;
   padding: 20px;
   color: var(--darkbrown);
 }
@@ -166,24 +173,44 @@ footer {
   margin-top: auto;
 }
 
-/* Note Labels for Practice Keyboard */
-.white-key, .black-key {
+.green-text {
+  color: #32a24c;
+}
+
+.background-notes {
+  background-image: url(/assets/images/papyrus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 500px;
   display: flex;
-  justify-content: center; 
-  align-items: flex-end; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.notes-span {
+  font-size: 2rem;
+}
+
+/* Note Labels for Practice Keyboard */
+.white-key,
+.black-key {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .note-label {
-  color: #3d2617; 
+  color: #3d2617;
 }
 
 .white-key .note-label {
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
-
 .black-key .note-label {
-  color: #bdb2a0; 
+  color: #bdb2a0;
 }
 
 .highlight-next {
