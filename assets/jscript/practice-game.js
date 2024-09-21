@@ -96,3 +96,20 @@ function initialSetup() {
   }
 }
 document.onload = initialSetup();
+
+/**
+ * Prompts user with the next key to push 
+ */
+
+function showNextKey() {
+  if (currentKeyIndex < keys.length) {
+      const nextKey = keys[currentKeyIndex];
+      const nextKeyElement = document.querySelector(`[data-key=${nextKey}]`);
+
+      nextKeyElement.classList.add('highlight-next');
+
+      setTimeout(() => {
+        nextKeyElement.classList.remove('highlight-next');
+    }, 1000);
+  }
+}

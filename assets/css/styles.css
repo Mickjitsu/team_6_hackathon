@@ -186,6 +186,10 @@ footer {
   color: #bdb2a0; 
 }
 
+.highlight-next {
+  border: 2px solid pink;
+}
+
 @media (max-width: 500px) {
   #hero-image {
     height: 220px;
