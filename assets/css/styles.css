@@ -78,11 +78,17 @@ a.active {
 .btn-brown {
   background-color: var(--darkbrown);
   color: var(--white);
+  font-size: 1.5rem;
 }
 
 .btn-brown:hover {
   background-color: var(--page-background);
   color: var(--darkbrown);
+}
+
+.noselect {
+  user-select: none;
+  cursor: default;
 }
 
 #footer {
@@ -329,23 +335,15 @@ a.active {
   background: linear-gradient(to bottom, #fff 0%, #e9e9e9 100%);
 }
 
-.black-key:active {
+/* .black-key:active {
   box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2) inset,
     0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
   background: linear-gradient(to right, #444 0%, #222 100%);
-}
-
-.correct-key {
-  background-color: #32a24c;
-}
+} */
 
 .notes-container {
   padding: 20px;
   color: var(--darkbrown);
-}
-
-.wrong-key {
-  background-color: #b92727;
 }
 
 /* black keys overlay white keys */
@@ -390,8 +388,8 @@ footer {
   background-image: url(/assets/images/papyrus.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  height: 650px;
+  background-size: cover;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -400,13 +398,20 @@ footer {
 }
 
 .notes-span {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .blackkey-letter {
   color: var(--white);
 }
 
+.wrong-key {
+  background-color: #b92727;
+}
+
+.correct-key {
+  background-color: #32a24c;
+}
 /* Note Labels for Practice Keyboard ------------------------------------- */
 .white-key,
 .black-key {
