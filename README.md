@@ -166,23 +166,13 @@ The priorities are reflected with **labels** on each user story on [this project
 
 ##### Deployment
 
-To deploy the repository using Heroku:
-- Log into or sign up for a Heroku account.
-- Navigate to the dashboard.
-- Navigate to the button "New" in the top right corner and select "Create New App" from the navigation dropdown menu.
-- Enter a name for the app. The name of the app must be unique and cannot be identical to any other app deployed by other users on Heroku.
-- Select your region, "United States" or "Europe", from the navigation dropdown menu.
-- Click on the button "Create App".
-- Navigate to "Deploy" on the top navigation menu, scroll down to "Deploy Method" and connect the repository with GitHub.
-- Navigate to "Settings" on the top navigation menu.
-- In the section "Config Var", click on the button "Reveal Config Vars".
-- Click on "Add a new Config Var" and add the necessary keys and values.
-- Navigate to section "Deploy" on the top navigation menu.
-- Select "GitHub" as the deployment method.
-- Search for the repository to be deployed by using the search bar and click "Connect".
-- Select the repository branch to be deployed.
-- Choose "Manual" or "Automatic" deployment.
-- After successful deployment, click the button "View" to open the link to the deployed project.
+To deploy the repository using GitHub Pages:
+- Navigate to settings of the repository on the top navigation menu.
+- Navigate to Pages on the left sidebar navigation menu.
+- In the section "Build and deployment”, go to Source and select "Deploy from a branch" from the navigation dropdown menu.
+- In the section "Branch", select the following from the dropdown menus: "Main", "Root" and click "Save".
+- The link to the deployed website will appear at the top of the section as soon as processed.
+- The link is accessible from the main page of the depository on the right navigation menu under "Deployments".
 
 ##### Creating A Fork
 
