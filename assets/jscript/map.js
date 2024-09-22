@@ -71,7 +71,7 @@ const composers = [
         "coordinates": [52.4095, 16.9349],
         "personal_history_summary": "Frédéric Chopin was born on March 1, 1810, in Żelazowa Wola, Poland, to a French father and a Polish mother. He showed exceptional musical talent as a child and began composing and performing in public by the age of seven. At 20, Chopin left Poland for Paris, where he spent most of his life, becoming part of the vibrant intellectual and artistic circles of the city. His personal life was marked by health problems, including tuberculosis, and a tumultuous relationship with French writer George Sand. His health deteriorated, and he died at the age of 39 in 1849.",
         "musical_influence_summary": "Chopin revolutionized piano music with his technically challenging yet deeply emotional works. He focused almost exclusively on the piano, composing a wide range of pieces such as études, nocturnes, and polonaises, which emphasized lyricism, virtuosity, and national identity. His harmonic innovations and use of the rubato technique influenced generations of pianists and composers. His music’s lyrical quality and emotional depth placed him at the forefront of Romantic music, and his work continues to influence classical piano performance and pedagogy.",
-        "image_url": "/assets/images/composers/Chopin.webp"
+        "image_url": "/assets/images/composers/chopin.webp"
     },
     {
         "name": "Pyotr Ilyich Tchaikovsky",
