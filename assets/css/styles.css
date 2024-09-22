@@ -321,6 +321,11 @@ a.active {
   background: linear-gradient(to bottom, #fff 0%, #e9e9e9 100%);
 }
 
+.black-key:active {
+  box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2) inset,
+    0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to right, #444 0%, #222 100%);
+}
 .correct-key {
   background-color: #32a24c;
 }
@@ -376,7 +381,7 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 500px;
+  height: 650px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -386,7 +391,9 @@ footer {
 .notes-span {
   font-size: 2rem;
 }
-
+.blackkey-letter {
+  color: var(--white);
+}
 /* Note Labels for Practice Keyboard ------------------------------------- */
 .white-key,
 .black-key {
