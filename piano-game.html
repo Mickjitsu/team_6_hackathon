@@ -52,8 +52,19 @@
             </div>
         </nav>
     </header>
-
     <main>
+        <!-- Welcome Container -->
+        <div class="container welcome-container my-5">
+            <div class="row">
+                <div class="col-12  col-lg-5 mx-auto text-center my-5 p-4 card">
+                    <h2>Welcome To Game Mode</h2>
+                    <p>Play the composition and get your score</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="./assets/images/game.jpg" class="welcome-image"
+                                alt="image of person playing piano">
+                        </div>
+
         <canvas id="notedrop-canvas" width="980" height="210"></canvas>
 
         <div id="piano-container">
@@ -169,101 +180,23 @@
                         <p class="pb-4 pt-3">5</p>
                         <p>F#</p>
                     </div>
-                </div>
-                <div class="spacer"></div>
-                <div class="black-key text-center text-white" data-key="key09">
-                    <div>
-                        <p class="pb-4 pt-3">6</p>
-                        <p>G#</p>
+                    <div class="row p-3">
+                        <div class="col-12">
+                            <div id="button-container">
+                                <button onclick="location.href='piano-game-area.html?twinkleStar'" class="difficulty-btn easy btn btn-green mx-3 px-3">
+                                    Easy
+                                </button>
+                                <button onclick="location.href='piano-game-area.html?furElise'" class="difficulty-btn hard btn btn-red px-3">
+                                    Hard
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="spacer"></div>
-                <div class="black-key text-center text-white" data-key="key11">
-                    <div>
-                        <p class="pb-4 pt-3">7</p>
-                        <p>A#</p>
-                    </div>
-                </div>
-                <div class="spacer"></div>
-                <div class="spacer"></div>
-                <div class="spacer"></div>
-                <div class="spacer"></div>
-                <div class="black-key text-center text-white" data-key="key14">
-                    <div>
-                        <p class="pb-4 pt-3">G</p>
-                        <p>C#</p>
-                    </div>
-                </div>
-                <div class="spacer"></div>
-                <div class="black-key text-center text-white" data-key="key16">
-                    <div>
-                        <p class="pb-4 pt-3">H</p>
-                        <p>D#</p>
-                    </div>
-                </div>
-                <div class="spacer"></div>
-                <div class="spacer"></div>
-                <div class="spacer"></div>
-                <div class="spacer"></div>
-                <div class="black-key text-center text-white" data-key="key19">
-                    <div>
-                        <p class="pb-4 pt-3">K</p>
-                        <p>F#</p>
-                    </div>
-                </div>
-                <div class="spacer"></div>
-                <div class="black-key text-center text-white" data-key="key21">
-                    <div>
-                        <p class="pb-4 pt-3">L</p>
-                        <p>G#</p>
-                    </div>
-                </div>
-                <div class="spacer"></div>
-                <div class="black-key text-center text-white" data-key="key23">
-                    <div>
-                        <p class="pb-4 pt-3">;</p>
-                        <p>A#</p>
-                    </div>
-                </div>
-                <div class="spacer"></div>
-                <div class="spacer"></div>
             </div>
-
         </div>
-
-        <!-- <button id="twinkle-star" onclick="twinkleStar()">PLAY TWINKLE STAR!</button>
-        <button id="fur-elise" onclick="furElise()">PLAY FUR ELISE</button>
-        <button id="dev-test" onclick="test()">TEMPORARY TEST BUTTON</button> -->
-
-
     </main>
-
-    <div class="mx-auto mt-5">
-        <!-- <button id="twinkle-star" onclick="setNotes()">PLAY TWINKLE STAR!</button> -->
-        <button id="twinkle-star" onclick="twinkleStar()">PLAY TWINKLE STAR!</button>
-    </div>
-    <div class="mx-auto mt-5">
-        <button id="fur-elise" onclick="furElise()">PLAY FUR ELISE</button>
-    </div>
-
-
-
-    <div class="mx-auto my-3">
-        <a href="highscore.html" class="btn btn-brown">Highscores</a>
-    </div>
-
-    <div class="mx-auto">
-        <div id="clicks-left">Notes left: </div>
-    </div>
-
-    <div id="score-container" class="mx-auto">
-        <div id="score">Score: 0</div>
-    </div>
-
-    <div id="notes-correct" class="mx-auto">
-        <div id="notes-correct-text">Notes Correct: </div>
-    </div>
-
+                
     <footer class="text-center text-lg-start py-4" id="footer">
         <div class="text-center copyright">
             <p class="mb-0">&copy; Copyright Hackathon Project, Team: Challenged Composers <a
@@ -349,17 +282,6 @@
         crossorigin="anonymous"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f6549ef1f7.js" crossorigin="anonymous"></script>
-    <!-- javascripts -->
-    <script src="./assets/jscript/keyboard.js"></script>
-    <script src="./assets/jscript/game-mechanics.js"></script>
-    <script src="./assets/jscript/composing.js"></script>
-    <script src="./assets/jscript/twinkle-star.js"></script>
-
-    <script src="./assets/jscript/fur-elise.js"></script>
-
-    <script src="./assets/jscript/piano-game.js"></script>
-    <script src="./assets/jscript/end.js"></script>
-
 </body>
 
 </html>

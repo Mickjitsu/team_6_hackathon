@@ -48,9 +48,7 @@ function setAllKeys(){
  * false for black notes 
  */
 function determineNoteType(note){
-    for (let i of blackNotes){
-        if(i.getAttribute("data-key") === note.key) return false;
-    }
+    for (let i of blackNotes) if(i.getAttribute("data-key") === note.key) return false;
     return true;
 }
 /**

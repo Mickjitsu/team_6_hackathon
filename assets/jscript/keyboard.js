@@ -56,20 +56,3 @@ function initialSetup() {
 }
 
 document.onload = initialSetup();
-
-document.addEventListener("DOMContentLoaded", function () {
-    let scrollableDiv = document.getElementById('scrollableDiv');
-    console.log('scrollableDiv', scrollableDiv);
-
-    // Start from the bottom of the div
-    scrollableDiv.scrollTop = scrollableDiv.scrollHeight - scrollableDiv.clientHeight;
-
-    // Auto scroll the div
-    let scrollInterval = setInterval(() => {
-        scrollableDiv.scrollTop -= 1; // Adjust this value to control the scroll speed
-        // Reset to bottom if the top is reached
-        if (scrollableDiv.scrollTop <= 0) {
-            scrollableDiv.scrollTop = scrollableDiv.scrollHeight - scrollableDiv.clientHeight;
-        }
-    }, 40); // Speed of the scrolling (40ms per scroll step)
-});
