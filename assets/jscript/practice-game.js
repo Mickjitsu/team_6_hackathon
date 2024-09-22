@@ -158,13 +158,13 @@ let eliseKeys = [
   'key16',
 ];
 
-// let eliseKeys = ['key23', 'key22', 'key23'];
-
 function checkKey(key, keys) {
   userInputArr.push(key);
 
   let notes = document.querySelectorAll('.notes-span');
   let currentKey = document.querySelector(`[data-key=${key}]`);
+  const practiceContainer = document.querySelector('.practice-container');
+  const gameOverContainer = document.querySelector('.game-end-container');
 
   // Check the user input vs the correct note
   if (userInputArr[currentKeyIndex] === keys[currentKeyIndex]) {
@@ -181,11 +181,13 @@ function checkKey(key, keys) {
     currentKeyIndex++;
 
     if (currentKeyIndex >= keys.length) {
-      console.log('Sequence complete');
       // Reset for the next sequence
       userInputArr = [];
       currentKeyIndex = 0;
       notes.forEach((note) => note.classList.remove('green-text'));
+
+      practiceContainer.classList.add('hidden');
+      gameOverContainer.classList.remove('hidden');
     }
   } else {
     currentKey.classList.add('wrong-key');
@@ -211,7 +213,6 @@ function displayNotes(mode) {
  <span class="notes-span">A, </span>
  <span class="notes-span">A, </span>
  <span class="notes-span">G, </span>
- <br>
  <span class="notes-span">F, </span>
  <span class="notes-span">F, </span>
  <span class="notes-span">E, </span>
@@ -227,7 +228,6 @@ function displayNotes(mode) {
  <span class="notes-span">E, </span>
  <span class="notes-span">E, </span>
  <span class="notes-span">D, </span>
-   <br>
  <span class="notes-span">G, </span>
  <span class="notes-span">G, </span>
  <span class="notes-span">F, </span>
@@ -243,7 +243,6 @@ function displayNotes(mode) {
  <span class="notes-span">A, </span>
  <span class="notes-span">A, </span>
  <span class="notes-span">G, </span>
-   <br>
  <span class="notes-span">F, </span>
  <span class="notes-span">F, </span>
  <span class="notes-span">E, </span>
@@ -264,7 +263,6 @@ function displayNotes(mode) {
     <span class="notes-span">G#</span>
     <span class="notes-span">F#</span>
     <span class="notes-span">D#</span>
-    <br>
     <span class="notes-span">D#</span>
     <span class="notes-span">D#</span>
     <span class="notes-span">F#</span>
@@ -285,7 +283,6 @@ function displayNotes(mode) {
     <span class="notes-span">D#</span>
     <span class="notes-span">A#</span>
     <span class="notes-span">A#</span>
-    <br>
     <span class="notes-span">A</span>
     <span class="notes-span">A#</span>
     <span class="notes-span">A</span>
@@ -305,7 +302,6 @@ function displayNotes(mode) {
     <span class="notes-span">F</span>
     <span class="notes-span">D</span>
     <span class="notes-span">F</span>
-    <br>
     <span class="notes-span">A#</span>
     <span class="notes-span">F#</span>
     <span class="notes-span">F</span>
@@ -325,7 +321,6 @@ function displayNotes(mode) {
     <span class="notes-span">C#</span>
     <span class="notes-span">G#</span>
     <span class="notes-span">F</span>
-    <br>
     <span class="notes-span">B</span>
     <span class="notes-span">G#</span>
     <span class="notes-span">A#</span>
@@ -345,7 +340,6 @@ function displayNotes(mode) {
     <span class="notes-span">A#</span>
     <span class="notes-span">A#</span>
     <span class="notes-span">A#</span>
-    <br>
     <span class="notes-span">A#</span>
     <span class="notes-span">A#</span>
     <span class="notes-span">A</span>
