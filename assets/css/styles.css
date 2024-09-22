@@ -263,12 +263,12 @@ a.active {
   margin-top: 30px;
   width: 100%;
   text-align: center;
-  height: 500px;
+  height: 350px;
 }
 
 .youtube-video iframe{
   align-self: center;
-  margin-bottom:30px;
+  margin-bottom:10px;
   width: 80%;
   height: 80%;
   max-width: 500px;
