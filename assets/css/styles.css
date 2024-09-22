@@ -269,7 +269,7 @@ a.active {
 
 .youtube-video iframe{
   align-self: center;
-  margin-bottom:10px;
+  margin-bottom:15px;
   width: 80%;
   height: 80%;
   max-width: 500px;
@@ -279,6 +279,7 @@ a.active {
 .youtube{
   text-align: center;
 }
+
 .hidden{
   display:none;
 }
