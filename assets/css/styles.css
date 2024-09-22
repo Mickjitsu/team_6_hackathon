@@ -158,7 +158,6 @@ a.active {
   padding-bottom: 10px;
   overflow: scroll;
   color: antiquewhite;
-
 }
 
 .list-content {
@@ -185,7 +184,7 @@ a.active {
 
 .personal-history {
   text-align: left;
-  margin-top: 20px
+  margin-top: 20px;
 }
 
 .musical-history {
@@ -202,12 +201,10 @@ a.active {
   overflow: scroll;
 }
 
-
 .historical-image {
   display: flex;
   justify-content: center;
 }
-
 
 .historical-image img {
   width: auto;
@@ -270,7 +267,7 @@ a.active {
   object-fit: cover;
 }
 
-.youtube-video{
+.youtube-video {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
@@ -279,22 +276,18 @@ a.active {
   height: 350px;
 }
 
-.youtube-video iframe{
+.youtube-video iframe {
   align-self: center;
-  margin-bottom:10px;
+  margin-bottom: 10px;
   width: 80%;
   height: 80%;
   max-width: 500px;
   max-height: 315px;
 }
 
-.youtube{
+.youtube {
   text-align: center;
 }
-
-main
-}
-
 
 /* Piano */
 #piano-container {
@@ -574,6 +567,10 @@ footer {
   display: none;
 }
 
+.hidden {
+  display: none;
+}
+
 .show {
   display: block;
 }
@@ -676,7 +673,6 @@ footer {
 }
 
 @media (max-width: 579px) {
-
   .history-list,
   .history {
     display: none;
@@ -694,7 +690,6 @@ footer {
 }
 
 @media (max-width: 991px) {
-
   .historical-image,
   .extra-information {
     display: none;
@@ -723,6 +718,6 @@ footer {
 
 @media (min-width: 991px) {
   .composer-small {
-    display: none
+    display: none;
   }
 }
