@@ -89,13 +89,116 @@ a.active {
   color: var(--white);
 }
 
+/*MAP PAGE*/
+/*Map page*/
+.page-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.map-info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.map-group{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.map-row{
+  width:100%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#map{
+  height: 400px;
+  width: 100%;
+  border-radius: 15px;
+}
+.map-welcome{
+  color: var(--white);
+  border-radius: 15px;
+  margin-top: 20px;
+  width: 80%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: auto;
+  flex: 1;
+} 
+.map-welcome-content{
+  text-align: center;
+}
+
+.history-list{
+  height: 400px;
+  box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+-webkit-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+-moz-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+  background-color:rgba(61, 38, 23, 0.6);
+  border-radius: 15px;
+  margin-bottom:20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: scroll;
+  color: var(--white);
+
+}
+.list-content{
+  text-align: left;
+  color: antiquewhite;
+}
+
+.personal-history{
+  text-align: left;
+}
+
+.musical-history{
+  text-align: right;
+}
+
+.composer{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 100%;
+  overflow: scroll;
+}
+
+.historical-image{
+  padding: 0;
+  margin-bottom: 20px;
+}
+.historical-image > img{
+  height: 100%;
+  width: 100%;
+  border-radius: 5%;
+}
+
+/* Div that is dynamicall shown along the right hand side*/
+.extra-information{
+  border: 2px solid black;
+  margin-left: 20px;
+  background-color:rgba(61, 38, 23, 0.6);
+  border-radius: 15px;
+  overflow: scroll;
+  color: var(--white);
+  box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+-webkit-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+-moz-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+}
+
+.hidden{
+  display:none;
+}
+
 /* Piano */
-
-/* !!! Please use more specific selector !!! */
-/* div {
-    transition: all 500ms;
-} */
-
 #piano-container {
   position: relative; /* for child elements to use relazive sizing (%) */
   margin: 0 auto; /* horizontal middle, 10% from top */
@@ -104,12 +207,17 @@ a.active {
   width: 980px;
 }
 
+#piano-container div {
+  transition: all 300ms;
+}
+
 /* white piano keys as 14 same divs in a row */
 #white-key-container {
   width: 100%;
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
+  position: absolute;
 }
 
 .white-key {
@@ -120,12 +228,19 @@ a.active {
   background-color: var(--white);
 }
 
+/* Shadow to active key */
+.white-key:active {
+  border-bottom: 1px solid #999;
+  box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1) inset,
+    -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fff 0%, #e9e9e9 100%);
+}
+
 .correct-key {
   background-color: #32a24c;
 }
 
 .notes-container {
-  height: 300px;
   padding: 20px;
   color: var(--darkbrown);
 }
@@ -140,6 +255,7 @@ a.active {
   display: flex;
   width: 100%;
   height: 60%;
+  pointer-events: none;
 }
 
 .black-key {
@@ -147,12 +263,12 @@ a.active {
   height: 100%;
   background-color: black;
   border-radius: 0 0 10px 10px;
+  pointer-events: all;
 }
 
 .spacer {
   flex-grow: 1;
-  height: 100%;
-  pointer-events: none; /* click on white key THROUGH spacer */
+  height: 0;
 }
 
 #notedrop-canvas {
@@ -166,24 +282,44 @@ footer {
   margin-top: auto;
 }
 
-/* Note Labels for Practice Keyboard ------------------------------------- */
-.white-key, .black-key {
+.green-text {
+  color: #32a24c;
+}
+
+.background-notes {
+  background-image: url(/assets/images/papyrus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 500px;
   display: flex;
-  justify-content: center; 
-  align-items: flex-end; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.notes-span {
+  font-size: 2rem;
+}
+
+/* Note Labels for Practice Keyboard ------------------------------------- */
+.white-key,
+.black-key {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .note-label {
-  color: #3d2617; 
+  color: #3d2617;
 }
 
 .white-key .note-label {
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
-
 .black-key .note-label {
-  color: #bdb2a0; 
+  color: #bdb2a0;
 }
 
 .highlight-next {
@@ -290,9 +426,53 @@ footer {
 
 /* Media Queries ------------------------------------------------------------ */
 
+.active {
+    background-color: rgba(170, 165, 165, 1);
+}
+
+/* Highscores page */
+#highscores-page {
+    margin: auto auto 0;
+}
+
+.div-list {
+    padding: 0 1rem;
+    background-color: rgba(241, 241, 241, 0.5);
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 1rem 0;
+}
+
+.high-score-table {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+#highscores-list {
+    padding-left: 0;
+    margin: 0.5rem 2rem;
+    letter-spacing: 0.05rem;
+}
+
+.high-score {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Media queries */
+
 @media (max-width: 500px) {
   #hero-image {
     height: 220px;
+  }
+}
+
+@media (max-width: 579px){
+  .history-list, .history{
+      display:none;
   }
 }
 
@@ -303,6 +483,15 @@ footer {
 
   .hero-text-container h1 {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 991px){
+  .historical-image, .extra-information{
+      display:none;
+  }
+  .contained{
+      flex: 0 1 calc(50% - 10px);
   }
 }
 
