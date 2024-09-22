@@ -1,9 +1,13 @@
-# Syncopated Symphonists (temp name; team_6_hackathon)
+# ![logo-dark](./documentation/logo-dark.png) Piano Master
 
-# Table Of Content
+[View the Live Project Here](https://mickjitsu.github.io/team_6_hackathon/)
+*(To open in a new window, press "ctrl" (or ⌘ for Mac) + click on the link)*
+
+Welcome to the Piano Master, a fully functioning musical game to improve your piano skills. This project is a collaborative effort by a team of 7 developers, the Challenged Composers, within the scope of Code Institute's Hackathon.
+
+# ![logo-dark](./documentation/logo-dark.png) Table Of Content
 
 - [User Experience](#user-experience)
-  - [User Stories](#user-stories)
   - [Site Goals](#site-goals)
   - [Scope](#scope)
 - [Design](#design)
@@ -12,7 +16,7 @@
   - [Wireframes](#wireframes)
   - [Agile Methodology](#agile-methodology)
     - [Overview](#overview)
-    - [EPICS(Milestones)](#epicsmilestones)
+    - [EPICS(Milestones)](#epics-milestones)
     - [User Stories issues](#user-stories-issues)
 - [Features](#features)
   - [Navbar](#navbar)
@@ -63,17 +67,22 @@ As a returning visitor,
 As a frequent visitor, 
 - I can play a visually appealing game to pass time in a fun way and/or to clear my head between long working sessions.
 
-##### User Stories
-
 ##### Site Goals
 
+- To provide a fun and engaging musical game experience.
+
 ##### Scope
+
+- The main piano game is be optimized for desktop devices, but still playable on mobile, tablet devices as well. 
+- All other pages and features are fully responsive on all screensizes and optimized for mobile, tablet, and desktop devices.
 
 ## Design
 
 ##### Colour Scheme
 
 The color scheme was detected from the hero image and chosen to create a warm and harmonious atmosphere.
+
+A limited color palette is used to avoid visual clutter.
 
 ![color-palette](./documentation/color-palette.png)
 
@@ -86,6 +95,20 @@ The color scheme was detected from the hero image and chosen to create a warm an
 [Rototo slab](https://fonts.google.com/specimen/Roboto+Slab?query=roboto+slab) was chosen as the primary font for a classy look with a focus on readability. The font is variable and offers a range of weights, making it suitable for various design elements.
 
 ##### Wireframes
+
+The wireframes were created using [Canva](https://www.canva.com/).
+
+![wireframe-color](./documentation/wireframe-color.png)
+
+![wireframe-welcome](./documentation/wireframe-welcome.png)
+
+![wireframe-game](./documentation/wireframe-game.png)
+
+![wireframe-game-menu](./documentation/wireframe-game-menu.png)
+
+![wireframe-game-completed](./documentation/wireframe-game-completed.png)
+
+![wireframe-musicmap](./documentation/wireframe-musicmap.png)
 
 ## Agile Methodology
 
@@ -114,13 +137,31 @@ The priorities are reflected with **labels** on each user story on [this project
 
 ##### Navbar
 
+- The website uses a clean layout with a clear visual hierarchy for easy navigation.
+- The user's current location on the website is always indicated in the navigation bar.
+- Navigation elements (links and buttons) are prominently placed and clearly labeled.
+
 ##### Footer
+
+- The footer is minimalistic and contains only copyright related information about the project.
 
 ##### Home
 
+- The Home page is a visually appealing introduction to the website, with a hero image and a brief description of what the website has to offer.
+
 ##### Error Pages
 
+The project uses a custom HTML error page for status code 404 (Not Found) for improved user experience. The error page maintains a consistent design with the rest of the website, clearly explains the meaning of the error code in a user-friendly way avoiding technical jargon, and uses clear, concise language. The error page displays a friendly image in line with the website theme to make the error page more visually appealing.
+
+![error-page](./documentation/custom-error-404.PNG)
+
 ## Future Features
+
+The game is coded in a way that it can be quickly extended to include more features and functionalities. The logic for playing the instrument compared to the song notes can be used for further songs and keyboard instruments.
+
+Dark Mode would be a nice addition to the game but this was beyond the scope of this project.
+
+![future-feature](./documentation/future-feature.png)
 
 ## Testing
 
@@ -143,6 +184,17 @@ The priorities are reflected with **labels** on each user story on [this project
 | User Experience | Design | As a user I can view a pleasant website design so that can enjoy using it. | The overall design is clean and the color palette is limited to avoid visual clutter | Passed |
 
 ## Bugs
+
+### Known Bugs
+
+There are no known bugs in the deployed project.
+
+### Resolved Bugs
+
+| Bug             | Description                                                                                       | Solution Applied                                                                                                                                | Result |
+|-----------------|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|--------|
+| Merge conflicts | Forking the repository and cloning it to the local machine caused time consuming merge conflicts. | Create a branch for each feature and to merge it into the main branch. Allows a complete overview and access to each team members current task. | Solved |
+
 
 ## Technologies And Languages
 
@@ -194,8 +246,11 @@ To clone the repository:
 
 ##### Media
 
-- [Vinyl Record, Image by Wikimedial mages, Pixabay](https://pixabay.com/photos/vinyl-lp-record-angle-2202325/)
-- [Leonardo AI](https://leonardoai.com/) 
+- [Leonardo AI](https://leonardoai.com/) to generate images
+- [Papyrus](https://www.creativefabrica.com/product/old-scroll-paper-banner/) as background for the musical notes
+- [Piano](https://www.pngwing.com/en/free-png-pvmnq) for the website logo
+- [Flaticon](https://images.app.goo.gl/PWfvDzdiRbpJBigi9) for the favicon
+- [Vinyl Record, Image by Wikimedial mages, Pixabay](https://pixabay.com/photos/vinyl-lp-record-angle-2202325/) for the about us page
 
 ##### Code
 
@@ -203,9 +258,14 @@ To clone the repository:
 
 ##### Contributors
 
+- Dayana [GitHub](https://github.com/Dayana-N), [LinkedIn](https://www.linkedin.com/in/dayana-nashkova-b46463165/)
+- Damir [GitHub](https://github.com/CorDamir), [LinkedIn](https://www.linkedin.com/in/damir-ćorić-03a166310/)
+- Erin [GitHub](https://github.com/erinvdoyle), [LinkedIn](https://www.linkedin.com/in/erinvdoyle)
+- Gudrun [GitHub](https://github.com/g-omarsdottir), [LinkedIn](http://www.linkedin.com/in/gudrun-omarsdottir)
+- Henna [GitHub](https://github.com/hennasingh), [LinkedIn](http://www.linkedin.com/in/hennasingh), [Website](https://hennasingh.dev/)
+- Michael [GitHub](https://github.com/MickJitsu), [LinkedIn](http://www.linkedin.com/in/michael-m-8818b5194)
+- Vasilis [GitHub](https://github.com/Vasileios20), [LinkedIn](https://www.linkedin.com/in/vasileios-tsimourdagkas/)
+
 ##### Acknowledgements
 
-
-##### Comments
-
->>>>>>> 36bde1cc2705233ac6b6dbebd977a4bf66684390
+- [Code Institute](https://codeinstitute.net/) for this Hackathon event.
