@@ -256,6 +256,28 @@ a.active {
   border-radius: 10%;
   object-fit: cover;
 }
+
+.youtube-video{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  height: 350px;
+}
+
+.youtube-video iframe{
+  align-self: center;
+  margin-bottom:10px;
+  width: 80%;
+  height: 80%;
+  max-width: 500px;
+  max-height: 315px;
+}
+
+.youtube{
+  text-align: center;
+}
 .hidden{
   display:none;
 }
