@@ -90,20 +90,20 @@ a.active {
 }
 
 /*MAP PAGE*/
-/*Map page*/
+/*MAP PAGE*/
 .page-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.map-info {
+.map-info{
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.map-group {
+.map-group{
   margin-top: 50px;
   width: 100%;
   display: flex;
@@ -112,11 +112,11 @@ a.active {
 }
 .map-row{
   width:100%;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-left: auto;
   margin-right: auto;
 }
-#map {
+#map{
   height: 400px;
   width: 100%;
   border-radius: 15px;
@@ -124,7 +124,7 @@ a.active {
 -webkit-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
 -moz-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
 }
-.map-welcome {
+.map-welcome{
   color: var(--white);
   border-radius: 15px;
   margin-top: 20px;
@@ -134,40 +134,58 @@ a.active {
   justify-content: center;
   margin-bottom: auto;
   flex: 1;
-}
-.map-welcome-content {
+} 
+.map-welcome-content{
   text-align: center;
 }
 
-.history-list {
+.history-list{
   height: 400px;
   box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
-  -webkit-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
-  -moz-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
-  background-color: rgba(61, 38, 23, 0.6);
+-webkit-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+-moz-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+  background-color:rgba(61, 38, 23, 0.6);
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin-bottom:20px;
   padding-top: 10px;
   padding-bottom: 10px;
   overflow: scroll;
-  color: var(--white);
+  color: antiquewhite;
 
 }
-.list-content {
+.list-content{
   text-align: left;
   color: antiquewhite;
 }
 
+.list-content  li {
+  cursor: pointer; 
+  font-size: 16px; 
+  transition: font-size 0.3s ease; 
+}
+
+.list-content ul li:hover{
+  font-size: 18px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.life-history{
+  display: flex;
+  flex-direction: column;
+}
 .personal-history{
   text-align: left;
   margin-top: 20px
 }
 
 .musical-history{
-  text-align: right;
+  text-align: left;
+  margin-top:20px;
+  margin-bottom: 20px;
 }
 
-.composer {
+.composer{
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -177,34 +195,71 @@ a.active {
 
 
 .historical-image{
-  padding: 0;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
-.historical-image > img{
-  height: 100%;
-  width: 100%;
-  border-radius: 5%;
+
+
+.historical-image img{
+  width: auto;
+  height: auto;
+  max-height: 300px;
+  border-radius: 10%;
+  object-fit: contain;
+  position: relative;
+  border-radius: 10%;
 }
 
 .artist-basic-info{
   margin-top: 5px;
 }
 /* Div that is dynamicall shown along the right hand side*/
+
 .extra-information{
-  border: 2px solid black;
   margin-left: 20px;
-  background-color: rgba(61, 38, 23, 0.6);
+  background-color:rgba(61, 38, 23, 0.6);
   border-radius: 15px;
   overflow: scroll;
   color: var(--white);
   box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
-  -webkit-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
-  -moz-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+-webkit-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+-moz-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
 }
 
+.composer-small{
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  margin-top:20px;
+}
+.info-small{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 20px;
+}
+.historical-image-sm{
+  max-width: 50%;
+  max-height: 350px;
+  margin-bottom:10px;
+  border-radius: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.historical-image-sm img{
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+  object-fit: cover;
+}
 .hidden{
   display:none;
 }
+
 
 /* Piano */
 #piano-container {
@@ -538,9 +593,6 @@ footer {
 @media (max-width: 991px){
   .historical-image, .extra-information{
       display:none;
-  }
-  .contained{
-      flex: 0 1 calc(50% - 10px);
   }
 }
 
