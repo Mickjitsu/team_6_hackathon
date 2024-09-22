@@ -1,54 +1,52 @@
 let userInputArr = [];
 let currentKeyIndex = 0;
+/* Keys for Twinkle Twinkle Little Star */
+const twinkleKeys = [
+  'key13',
+  'key13',
+  'key20',
+  'key20',
+  'key22',
+  'key22',
+  'key20',
+  'key18',
+  'key18',
+  'key17',
+  'key17',
+  'key15',
+  'key15',
+  'key13',
+  'key20',
+  'key20',
+  'key18',
+  'key18',
+  'key17',
+  'key17',
+  'key15',
+  'key20',
+  'key20',
+  'key18',
+  'key18',
+  'key17',
+  'key17',
+  'key15',
+  'key13',
+  'key13',
+  'key20',
+  'key20',
+  'key22',
+  'key22',
+  'key20',
+  'key18',
+  'key18',
+  'key17',
+  'key17',
+  'key15',
+  'key15',
+  'key13',
+];
 
-function checkKey(key) {
-  /* Keys for Twinkle Twinkle Little Star */
-
-  const keys = [
-    'key13',
-    'key13',
-    'key20',
-    'key20',
-    'key22',
-    'key22',
-    'key20',
-    'key18',
-    'key18',
-    'key17',
-    'key17',
-    'key15',
-    'key15',
-    'key13',
-    'key20',
-    'key20',
-    'key18',
-    'key18',
-    'key17',
-    'key17',
-    'key15',
-    'key20',
-    'key20',
-    'key18',
-    'key18',
-    'key17',
-    'key17',
-    'key15',
-    'key13',
-    'key13',
-    'key20',
-    'key20',
-    'key22',
-    'key22',
-    'key20',
-    'key18',
-    'key18',
-    'key17',
-    'key17',
-    'key15',
-    'key15',
-    'key13',
-  ];
-
+function checkKey(key, keys) {
   userInputArr.push(key);
 
   let notes = document.querySelectorAll('.notes-span');
@@ -74,7 +72,6 @@ function checkKey(key) {
       userInputArr = [];
       currentKeyIndex = 0;
       notes.forEach((note) => note.classList.remove('green-text'));
-      // notes[0].classList.add('green-text');
     }
   } else {
     currentKey.classList.add('wrong-key');
@@ -86,9 +83,11 @@ function checkKey(key) {
   }
 }
 
-function displayNotes() {
+function displayNotes(mode) {
   const notesContainer = document.getElementsByClassName('key-notes')[0];
-  notesContainer.innerHTML = `
+
+  if (mode == 'easy') {
+    notesContainer.innerHTML = `
 <h4>Twinkle Twinkle Little Star <i class="fa-regular fa-star fa-lg" style="color: #74C0FC;"></i></h4>
 <br>
  <span class="notes-span">C, </span>
@@ -139,16 +138,20 @@ function displayNotes() {
  <span class="notes-span">D, </span>
  <span class="notes-span">C, </span>
   `;
+  } else if (mode == 'hard') {
+    notesContainer.innerHTML = 'fur elise';
+  }
 }
 
 function handleKeyClick() {
   let note = this.getAttribute('data-key');
   let playThis = new Audio(`./assets/sounds/piano-notes/${note}.ogg`);
   playThis.play();
-  checkKey(note);
+  checkKey(note, twinkleKeys);
 }
-function initialSetup() {
-  displayNotes();
+
+function initialSetup(mode) {
+  displayNotes(mode);
 
   let whiteKeys = document.getElementsByClassName('white-key');
   let blackKeys = document.getElementsByClassName('black-key');
@@ -159,4 +162,33 @@ function initialSetup() {
     key.addEventListener('click', handleKeyClick);
   }
 }
-document.onload = initialSetup();
+
+function selectDifficulty() {
+  const difficultyButtons = document.querySelectorAll('.difficulty-btn');
+  const welcomeScreen = document.getElementsByClassName('welcome-container');
+  const practiceContainer =
+    document.getElementsByClassName('practice-container');
+
+  difficultyButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      if (e.target.classList.contains('easy')) {
+        // display the easy mode
+
+        welcomeScreen[0].classList.add('hide');
+        practiceContainer[0].classList.remove('hide');
+        initialSetup('easy');
+      } else if (e.target.classList.contains('hard')) {
+        // display difficult mode
+        welcomeScreen[0].classList.add('hide');
+        practiceContainer[0].classList.remove('hide');
+        initialSetup('hard');
+        console.log('hard');
+      } else {
+        document.getElementsByClassName('.welcome-container').innerHTML =
+          '<p>Something went wrong! </p> <a href="index.html" class="btn btn-red">Go Back</a>';
+      }
+    });
+  });
+}
+
+document.onload = selectDifficulty();

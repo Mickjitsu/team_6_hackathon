@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PianoMaster</title>
     <meta name="title" content="PianoMaster">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -49,7 +53,33 @@
         </nav>
     </header>
     <main>
-        <div class="container">
+        <!-- Welcome Container -->
+        <div class="container welcome-container my-5">
+            <div class="row">
+                <div class="col-12  col-lg-5 mx-auto text-center my-5 p-4 card">
+                    <h2>Welcome To Practice Mode</h2>
+                    <p>Please select mode to continue</p>
+                    <div class="row">
+                        <div class="col-12">
+
+                            <img src="./assets/images/practice.jpg" class="welcome-image"
+                                alt="image of person playing piano">
+                        </div>
+                    </div>
+                    <div class="row p-3">
+                        <div class="col-12">
+                            <div id="button-container">
+                                <button data-type="easy"
+                                    class="difficulty-btn easy btn btn-green mx-3 px-3">Easy</button>
+                                <button data-type="hard" class="difficulty-btn hard btn btn-red px-3">Hard</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Practice mode -->
+        <div class="container practice-container hide">
             <div class="row justify-content-center">
                 <div class="col-10 text-center notes-container">
                     <div class="background-notes">
@@ -57,7 +87,7 @@
                         </h3>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row my-3">
 
                     <div class="col-12">
                         <div id="piano-container">
