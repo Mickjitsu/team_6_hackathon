@@ -18,6 +18,7 @@
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -74,66 +75,122 @@
             <div class="map-info">
                 <div class="map-group">
                     <div class="row map-row">
-                        <div class="col-md-2 col-sm-4 history-list">
-                            <div class="list-content">
+                        <div class="col-md-3 col-sm-3 history-list">
+                            <h4>Influential composers</h4>
+                            <p>Choose a composer from the list below
+                                to find out more information about where
+                                they are from and their history.
+                            </p>
+                            <div class="list-content p-3">
+                                <h5>Baroque</h5>
                                 <ul>
                                     <li id="johan">Johann Sebastian Bach</li>
-                                    <li id="beethoven">Ludwig van Beethoven</li>
+                                </ul>
+
+                                <h5>Classical</h5>
+                                <ul>
                                     <li id="mozart">Wolfgang Amadeus Mozart</li>
+                                </ul>
+
+                                <h5>Classical/Romantic</h5>
+                                <ul>
+                                    <li id="beethoven">Ludwig van Beethoven</li>
+                                </ul>
+
+                                <h5>Romantic</h5>
+                                <ul>
                                     <li id="chopin">Frédéric Chopin</li>
-                                    <li id="pyotr">Pyotr Ilyich Tchaikovsky</li>
-                                    <li id="wagner">Richard Wagner </li>
-                                    <li id="debussy">Claude Debussy</li>
-                                    <li id="igor">Igor Stravinsky</li>
+                                    <li id="wagner">Richard Wagner</li>
                                     <li id="brahms">Johannes Brahms</li>
+                                    <li id="pyotr">Pyotr Ilyich Tchaikovsky</li>
+                                </ul>
+
+                                <h5>Late Romantic</h5>
+                                <ul>
                                     <li id="mahler">Gustav Mahler</li>
                                 </ul>
+
+                                <h5>Impressionist/Modern</h5>
+                                <ul>
+                                    <li id="debussy">Claude Debussy</li>
+                                </ul>
+
+                                <h5>Modern</h5>
+                                <ul>
+                                    <li id="igor">Igor Stravinsky</li>
+                                </ul>
+
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-5 col-sm-7">
                             <div id="map"></div>
                         </div>
                         <div class="col-lg-3 extra-information hidden">
-                            <div class="composer">
-                                <div class="historical-image">
-                                    <img src="assets/images/beethoven.jpg">
+                                <div class="composer">
+                                    <div class="historical-image">
+                                        <img src="">
+                                    </div>
+                                <div class="artist-basic-info">
+                                    <p id="artist-name">
+                                        Name:
+                                    </p>
+                                    <p id="artist-from">
+                                        From:
+                                    </p>
+                                    <p id="artist-birth">
+                                        Born:
+                                    </p>
+                                    <p id="artist-death">
+                                        Died:
+                                    </p>
                                 </div>
-                                <p id="artist-from">From:
-                                </p>
-                                <p id="artist-birth">
-                                    Born:
-                                </p>
-                                <p id="artist-death">
-                                    Died:
-                                </p>
+                            </div>
                             </div>
                         </div>
                     </div>
-                    <div class="container life-history hidden">
-                        <div class="personal-history">
-                            <h3>Personal History</h3>
-                            <p class="personal-paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                                aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                mollit anim id est laborum."</p>
+                </div>
+                <div class="container life-history hidden">
+                    <div class="composer-small composer hidden">
+                    <div class="historical-image-sm">
+                        <img src="">
+                    </div>
+                        <div class="artist-basic-info info-small p-5">
+                            <p id="artist-name-sm">
+                                Name:
+                            </p>
+                            <p id="artist-from-sm">
+                                From:
+                            </p>
+                            <p id="artist-birth-sm">
+                                Born:
+                            </p>
+                            <p id="artist-death-sm">
+                                Died:
+                            </p>
                         </div>
-                        <div class="musical-history">
-                            <h3>Musical Influence</h3>
-                            <p class="musican-influence">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                                aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                mollit anim id est laborum."</p>
-                        </div>
+                    </div>
+                    <div class="personal-history">
+                        <h3>Personal History</h3>
+                        <p class="personal-paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum."</p>
+                    </div>
+                    <div class="musical-history">
+                        <h3>Musical Influence</h3>
+                        <p class="musical-influence">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum."</p>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
     <footer class="text-center text-lg-start" id="footer">
         <div class="text-center copyright">
