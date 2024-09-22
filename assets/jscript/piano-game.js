@@ -45,12 +45,6 @@ function startGame() {
     // Bind resetGame to the two song buttons
     document.getElementById('twinkle-star').addEventListener('click', () => resetGame('twinkle-star'));
     document.getElementById('fur-elise').addEventListener('click', () => resetGame('fur-elise'));
-
-    // Show modal on page load
-    document.addEventListener('DOMContentLoaded', function () {
-        const modal = new bootstrap.Modal(document.getElementById('instructionsModal'));
-        modal.show();
-    });
 }
 
 // Handle keydown event
@@ -203,3 +197,8 @@ function keyOrder(keyPressed) {
 
 // Start the game when the page loads
 document.addEventListener('DOMContentLoaded', startGame);
+// Show modal on page load
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = new bootstrap.Modal(document.getElementById('instructionsModal'));
+    modal.show();
+});
