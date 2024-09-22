@@ -5,42 +5,41 @@
 
 Welcome to the Piano Master, a fully functioning musical game to improve your piano skills. This project is a collaborative effort by a team of 7 developers, the Challenged Composers, within the scope of Code Institute's Hackathon.
 
-# ![logo-dark](./documentation/logo-dark.png) Table Of Content
+# ![logo-dark-xs](./documentation/logo-dark-xs.png) Table Of Content
 
-- [User Experience](#user-experience)
+- [User Experience](#logo-dark-xs-user-experience)
   - [Site Goals](#site-goals)
   - [Scope](#scope)
-- [Design](#design)
+- [Design](#logo-dark-xs-design)
   - [Colour Scheme](#colour-scheme)
   - [Fonts](#fonts)
   - [Wireframes](#wireframes)
-  - [Agile Methodology](#agile-methodology)
-    - [Overview](#overview)
+- [Agile Methodology](#logo-dark-xs-agile-methodology)
     - [EPICS(Milestones)](#epics-milestones)
     - [User Stories issues](#user-stories-issues)
-- [Features](#features)
+- [Features](#logo-dark-xs-features)
   - [Navbar](#navbar)
   - [Footer](#footer)
   - [Home](#home)
   - [Error Pages](#error-pages)
-- [Future Features](#future-features)
-- [Testing](#testing)
-- [Bugs](#bugs)
-- [Technologies And Languages](#technologies-and-languages)
+  - [Future Features](#future-features)
+- [Testing](#logo-dark-xs-testing)
+- [Bugs](#logo-dark-xs-bugs)
+- [Technologies And Languages](#logo-dark-xs-technologies-and-languages)
   - [Languages Used](#languages-used)
   - [Technologies and programs](#technologies-and-programs)
-- [Deployment](#deployment)
+- [Deployment](#logo-dark-xs-deployment)
   - [Deployment](#deployment)
   - [Creating A Fork](#creating-a-fork)
   - [Cloning Repository](#cloning-repository)
-- [Credits](#credits)
+- [Credits](#logo-dark-xs-credits)
   - [Media](#media)
   - [Code](#code)
   - [Contributors](#contributors)
   - [Acknowledgements](#acknowledgements)
   - [Comments](#comments)
 
-## User Experience
+## ![logo-dark-xs](./documentation/logo-dark-xs.png) User Experience
 
 ##### Target Audience
 
@@ -76,7 +75,7 @@ As a frequent visitor,
 - The main piano game is be optimized for desktop devices, but still playable on mobile, tablet devices as well. 
 - All other pages and features are fully responsive on all screensizes and optimized for mobile, tablet, and desktop devices.
 
-## Design
+## ![logo-dark-xs](./documentation/logo-dark-xs.png) Design
 
 ##### Colour Scheme
 
@@ -110,11 +109,9 @@ The wireframes were created using [Canva](https://www.canva.com/).
 
 ![wireframe-musicmap](./documentation/wireframe-musicmap.png)
 
-## Agile Methodology
+## ![logo-dark-xs](./documentation/logo-dark-xs.png) Agile Methodology
 
 This project utilizes Agile Development Methods to manage development and ensure efficient delivery.
-
-##### Overview
 
 ##### EPICS (Milestones)
 
@@ -133,21 +130,37 @@ The acronym stands for Must Have, Should Have, Could Have, and Won't Have. To ef
 A structural approach to determine which features are essential for the current stage (Must Have), which can be incorporated if time allows (Should Have), which might be deferred for later iterations (Could Have), and which are excluded from this iteration or unlikely to be implemented (Won't Have). 
 The priorities are reflected with **labels** on each user story on [this project's Kanban board](https://github.com/users/Mickjitsu/projects/3)
 
-## Features
+## ![logo-dark-xs](./documentation/logo-dark-xs.png) Features
 
 ##### Navbar
 
-- The website uses a clean layout with a clear visual hierarchy for easy navigation.
-- The user's current location on the website is always indicated in the navigation bar.
-- Navigation elements (links and buttons) are prominently placed and clearly labeled.
+The website uses a clean layout with a clear visual hierarchy for easy navigation.
+The user's current location on the website is always indicated in the navigation bar.
+Navigation elements (links and buttons) are prominently placed and clearly labeled.
 
 ##### Footer
 
-- The footer is minimalistic and contains only copyright related information about the project.
+The footer is minimalistic and contains only copyright related information about the project.
 
 ##### Home
 
-- The Home page is a visually appealing introduction to the website, with a hero image and a brief description of what the website has to offer.
+The Home page is a visually appealing introduction to the website, with a hero image and a brief description of what the website has to offer.
+
+![feature-home](./documentation/feature-home.png)
+
+##### Practice Mode
+
+The Practice Mode allows users to play a musical game with a piano keyboard. The game provides a fun and engaging way to learn and practice musical skills without any validation of the user's performance.
+
+![feature-choice](./documentation/feature-choice.png)
+
+The user can choose between two difficulty levels: Easy and Hard.
+
+![feature-practice](./documentation/feature-practise.png)
+
+##### Game Mode
+
+The Game Mode allows users to play a musical game with a piano keyboard. The game provides a fun and engaging way to learn and practice musical skills with validation of the user's performance. The user gets a score based on their performance.
 
 ##### Error Pages
 
@@ -155,7 +168,7 @@ The project uses a custom HTML error page for status code 404 (Not Found) for im
 
 ![error-page](./documentation/custom-error-404.PNG)
 
-## Future Features
+##### Future Features
 
 The game is coded in a way that it can be quickly extended to include more features and functionalities. The logic for playing the instrument compared to the song notes can be used for further songs and keyboard instruments.
 
@@ -163,7 +176,7 @@ Dark Mode would be a nice addition to the game but this was beyond the scope of 
 
 ![future-feature](./documentation/future-feature.png)
 
-## Testing
+## ![logo-dark-xs](./documentation/logo-dark-xs.png) Testing
 
 | Epic | Title | User Story | Expected Result | Result |
 |---|---|---|---|---|
@@ -183,7 +196,7 @@ Dark Mode would be a nice addition to the game but this was beyond the scope of 
 | User Experience | Web Accessibility | As a user with disabilities or using assistive technologies, I can easily navigate the website so that I can enjoy the website. | Operable: keyboard interface compatible, Distinguishable, e.g., the use of color | Passed |
 | User Experience | Design | As a user I can view a pleasant website design so that can enjoy using it. | The overall design is clean and the color palette is limited to avoid visual clutter | Passed |
 
-## Bugs
+## ![logo-dark-xs](./documentation/logo-dark-xs.png) Bugs
 
 ### Known Bugs
 
@@ -196,7 +209,7 @@ There are no known bugs in the deployed project.
 | Merge conflicts | Forking the repository and cloning it to the local machine caused time consuming merge conflicts. | Create a branch for each feature and to merge it into the main branch. Allows a complete overview and access to each team members current task. | Solved |
 
 
-## Technologies And Languages
+## ![logo-dark-xs](./documentation/logo-dark-xs.png) Technologies And Languages
 
 ##### Languages Used
 
@@ -214,7 +227,7 @@ There are no known bugs in the deployed project.
 - [Leonardo AI](https://leonardoai.com/) to create images
 - [Coolors.co](https://coolors.co/contrast-checker/ffffff-3d2617) for color contrast checker
 
-## Deployment
+## ![logo-dark-xs](./documentation/logo-dark-xs.png) Deployment
 
 ##### Deployment
 
@@ -242,7 +255,7 @@ To clone the repository:
 - Type "git clone" in the terminal and then paste the URL copied on GitHub in step 2, above.
 - Press "Enter" and your local clone will be created.
 
-## Credits
+## ![logo-dark-xs](./documentation/logo-dark-xs.png) Credits
 
 ##### Media
 
@@ -268,4 +281,4 @@ To clone the repository:
 
 ##### Acknowledgements
 
-- [Code Institute](https://codeinstitute.net/) for this Hackathon event.
+- [Code Institute](https://codeinstitute.net/) for this Hackathon event
