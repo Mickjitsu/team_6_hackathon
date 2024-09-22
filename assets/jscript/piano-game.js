@@ -118,5 +118,3 @@ function resetGame() {
     finished = false;
     updateClicksLeft();
 }
-
-
