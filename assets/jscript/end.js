@@ -1,9 +1,9 @@
 const saveButton = document.getElementById("btn-save");
 const username = document.getElementById("username");
 const finalScore = document.getElementById("final-score");
-const mostRecentScore = localStorage.getItem("lastScore");
-const questionsCorrect = localStorage.getItem("notesCorrect");
-finalScore.innerText = `${mostRecentScore} % | ${questionsCorrect} correct notes`;
+const songPlayed = localStorage.getItem("songPlayed");
+const notesCorrect = localStorage.getItem("notesCorrect");
+finalScore.innerText = `${notesCorrect} correct notes for ${songPlayed}`;
 
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
@@ -15,9 +15,9 @@ saveButton.addEventListener("click", (e) => {
     e.preventDefault();
 
     const score = {
-        score: mostRecentScore,
+        song: songPlayed,
         username: username.value,
-        correct: questionsCorrect
+        correct: notesCorrect
     };
     highScores.push(score);
 
