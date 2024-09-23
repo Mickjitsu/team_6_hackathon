@@ -35,7 +35,7 @@ a.active {
 
 /* Hero section */
 #hero-image {
-  background-image: url(../assets/images/hero.png);
+  background-image: url(../images/hero.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -422,7 +422,7 @@ footer {
 }
 
 .background-notes {
-  background-image: url(../assets/images/papyrus.png);
+  background-image: url(../images/papyrus.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
