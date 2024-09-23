@@ -204,6 +204,8 @@ Dark Mode would be a nice addition to the game but this was beyond the scope of 
 
 ![future-feature](./documentation/future-feature.png)
 
+Harpsichord as an additional instrument for the user to chose from. 
+
 ## ![logo-dark-xs](./documentation/logo-dark-xs.png) Testing
 
 ##### Manual Testing
