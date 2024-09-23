@@ -32,8 +32,7 @@ class noteTemplate {
 }
 /**
  * sets "allKeys{}" as 'data-key attribute': x coordinate
- * relative to parent(#piano-container) --------
- * sets "activeNotes{}" as 'data key attribute': false
+ * relative to parent(#piano-container)
  */
 function setAllKeys(){
     let pianoLoc = document.getElementById("piano-container").getBoundingClientRect().x;
