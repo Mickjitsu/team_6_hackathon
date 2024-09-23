@@ -135,5 +135,5 @@ function drawSong(){
     moveDown(); 
     // if last note didn't pass through canvas repeat this function every frame
     if(currentSongNotes[currentSongNotes.length - 1].y <= ctxElement.height) requestAnimationFrame(drawSong);
-    //alert("TODO: GAME END CODE AND SCREEN");
+    document.getElementById("user-score").innerText = userScore;
 }

@@ -25,12 +25,16 @@ const keyMap = {
     ';': 'key23',
 };
 
-var keysDown = {};
+var keysDown = {}; //track which key is pressed
 
 function handleKeyClick() {
     let note = this.getAttribute("data-key");
+    
     let playThis = new Audio(`./assets/sounds/piano-notes/${note}.ogg`);
     playThis.play();
+    
+    if(activeNotes[note]) userScore += 1;
+    else if (userScore > 0) userScore -= 1;
 }
 
 function initialSetup() {
@@ -52,8 +56,12 @@ function initialSetup() {
           if (keyElement) {
             if(!keysDown[note]) {
                 keysDown[note] = true;
+                
                 keyElement.click();  
                 keyElement.classList.toggle("active");
+                
+                if (activeNotes[note]) userScore += 1;
+                else if (userScore > 0) userScore -= 1;
             }
           }
         }
