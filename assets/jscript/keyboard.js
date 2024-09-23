@@ -25,16 +25,24 @@ const keyMap = {
     ';': 'key23',
 };
 
-var keysDown = {}; //track which key is pressed
+var keysDown = {}; //track which keys are pressed
 
 function handleKeyClick() {
     let note = this.getAttribute("data-key");
     
     let playThis = new Audio(`./assets/sounds/piano-notes/${note}.ogg`);
     playThis.play();
+
+    if (this.classList.contains("black-key")) this.classList.toggle("black-key-active");
+    else this.classList.toggle("white-key-active");
     
     if(activeNotes[note]) userScore += 1;
     else if (userScore > 0) userScore -= 1;
+}
+
+function handleKeyRelease() {
+    if (this.classList.contains("black-key")) this.classList.toggle("black-key-active");
+    else this.classList.toggle("white-key-active");
 }
 
 function initialSetup() {
@@ -43,10 +51,12 @@ function initialSetup() {
 
     for (let key of whiteKeys) {
         key.addEventListener("click", handleKeyClick);
+        key.addEventListener("mouseup", handleKeyRelease);
     }
 
     for (let key of blackKeys) {
         key.addEventListener("click", handleKeyClick);
+        key.addEventListener("mouseup", handleKeyRelease);
     }
 
     document.addEventListener('keydown', (event) => {
@@ -56,12 +66,7 @@ function initialSetup() {
           if (keyElement) {
             if(!keysDown[note]) {
                 keysDown[note] = true;
-                
                 keyElement.click();  
-                keyElement.classList.toggle("active");
-                
-                if (activeNotes[note]) userScore += 1;
-                else if (userScore > 0) userScore -= 1;
             }
           }
         }
@@ -71,7 +76,10 @@ function initialSetup() {
         const note = keyMap[event.key];
         if (note) {
             keysDown[note] = false;
-            document.querySelector(`[data-key="${note}"]`).classList.toggle("active");
+            let element = document.querySelector(`[data-key="${note}"]`);
+
+            if (element.classList.contains("black-key")) element.classList.toggle("black-key-active");
+            else element.classList.toggle("white-key-active");
           }
     });
 }
