@@ -10,7 +10,10 @@ canvas.fillStyle = colorDarkBrown;
 var allKeys = {}; //to contain keyboard key coordinates
 var currentSongNotes = []; //to contain notes for gameplay
 var blackNotes = []; //to contain all black-key divs
-var playthroughOn = false;
+var playthroughOn = false; //autoplay or not
+
+var userScore = 0; //score tracking
+var activeNotes = {}; //key: should-currently-be-played
 
 /* x - coordinate in canvas
    y - coordinate in canvas
@@ -19,7 +22,7 @@ var playthroughOn = false;
    playThis - to contain note audio for possible autoplay
    key - "data-key" attribute value for corresponding key on keyboard
 */
-   class noteTemplate {
+class noteTemplate {
     isWhite = null;
     key = "";
     x = 0;
@@ -29,7 +32,8 @@ var playthroughOn = false;
 }
 /**
  * sets "allKeys{}" as 'data-key attribute': x coordinate
- * relative to parent(#piano-container)
+ * relative to parent(#piano-container) --------
+ * sets "activeNotes{}" as 'data key attribute': false
  */
 function setAllKeys(){
     let pianoLoc = document.getElementById("piano-container").getBoundingClientRect().x;
@@ -42,6 +46,11 @@ function setAllKeys(){
 
     for (let i of blackNotes) {
         allKeys[i.getAttribute("data-key")] = i.getBoundingClientRect().x - pianoLoc;
+    }
+   
+    for (let i=1; i<25; i++){
+        if(i<10) activeNotes["key" + "0" + i] = false;
+        else activeNotes["key" + i] = false;
     }
 }
 /**
@@ -95,6 +104,8 @@ function moveDown(){
             if (note.y + note.length > ctxElement.height && note.y < ctxElement.height) {
                 temp.style.boxShadow = `0 -3px 15px wheat`;
                 temp.style.borderTop = "2px solid wheat";
+
+                activeNotes[note.key] = true;
                 
                 //if play requested play notes and add effects to autoplayed keys
                 if(playthroughOn){
@@ -106,11 +117,11 @@ function moveDown(){
                         note.playThis = new Audio(`./assets/sounds/piano-notes/${note.key}.ogg`);
                         note.playThis.play();
                     }
-                    if (note.playThis.currentTime > 0.5) note.playThis.play();
                 }
             }
             //if note has just ended
             if (note.y >= ctxElement.height) {
+                activeNotes[note.key] = false;
                 temp.style.boxShadow = "";
                 temp.style.border = "";
                 temp.style.outline = "";
@@ -124,4 +135,5 @@ function drawSong(){
     moveDown(); 
     // if last note didn't pass through canvas repeat this function every frame
     if(currentSongNotes[currentSongNotes.length - 1].y <= ctxElement.height) requestAnimationFrame(drawSong);
+    //alert("TODO: GAME END CODE AND SCREEN");
 }

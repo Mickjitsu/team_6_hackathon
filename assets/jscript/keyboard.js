@@ -1,3 +1,32 @@
+const keyMap = {
+    q: 'key01',
+    w: 'key03',
+    e: 'key05',
+    r: 'key06',
+    t: 'key08',
+    y: 'key10',
+    u: 'key12',
+    v: 'key13',
+    b: 'key15',
+    n: 'key17',
+    m: 'key18',
+    ',': 'key20',
+    '.': 'key22',
+    '/': 'key24',
+    2: 'key02',
+    3: 'key04',
+    5: 'key07',
+    6: 'key09',
+    7: 'key11',
+    g: 'key14',
+    h: 'key16',
+    k: 'key19',
+    l: 'key21',
+    ';': 'key23',
+};
+
+var keysDown = {};
+
 function handleKeyClick() {
     let note = this.getAttribute("data-key");
     let playThis = new Audio(`./assets/sounds/piano-notes/${note}.ogg`);
@@ -16,42 +45,26 @@ function initialSetup() {
         key.addEventListener("click", handleKeyClick);
     }
 
-    document.addEventListener("keydown", function (event) {
-        const keyMap = {
-            'a': 'key01', // C note
-            's': 'key03', // D note
-            'd': 'key05', // E note
-            'f': 'key06', // F note
-            'g': 'key08', // G note
-            'h': 'key10', // A note
-            'j': 'key12', // B note
-            'k': 'key13', // C note
-            'l': 'key15', // D note
-            ';': 'key17', // E note
-            "'": 'key18', // F note
-            'z': 'key20', // G note
-            'x': 'key22', // A note
-            'c': 'key24', // B note
-
-            '2': 'key02', // C# note
-            '3': 'key04', // D# note
-            '6': 'key07', // F# note
-            '7': 'key09', // G# note
-            '8': 'key11', // A# note
-            '9': 'key14', // C# note
-            '0': 'key16', // D# note
-            '-': 'key19', // F# note
-            '=': 'key21', // G# note
-
-        };
-
-        let note = keyMap[event.key];
-        console.log('note', note);
-
+    document.addEventListener('keydown', (event) => {
+        const note = keyMap[event.key];
         if (note) {
-            let playThis = new Audio(`./assets/sounds/piano-notes/${note}.ogg`);
-            playThis.play();
+          const keyElement = document.querySelector(`[data-key="${note}"]`);
+          if (keyElement) {
+            if(!keysDown[note]) {
+                keysDown[note] = true;
+                keyElement.click();  
+                keyElement.classList.toggle("active");
+            }
+          }
         }
+    });
+
+    document.addEventListener('keyup', (event) => {
+        const note = keyMap[event.key];
+        if (note) {
+            keysDown[note] = false;
+            document.querySelector(`[data-key="${note}"]`).classList.toggle("active");
+          }
     });
 }
 
