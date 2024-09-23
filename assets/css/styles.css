@@ -155,7 +155,7 @@ a.active {
 }
 
 .map-welcome {
-  color: var(--white);
+  color: black;
   border-radius: 15px;
   margin-top: 20px;
   width: 80%;
@@ -168,6 +168,18 @@ a.active {
 
 .map-welcome-content {
   text-align: center;
+}
+
+.map-welcome-content h1 {
+  color: antiquewhite;
+  box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+  -webkit-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+  -moz-box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.47);
+  background-color: rgba(61, 38, 23, 0.699);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .history-list {
@@ -199,6 +211,54 @@ a.active {
   font-size: 18px;
   color: var(--white);
   text-decoration: none;
+}
+
+.list-content h3 {
+  font-size: 1.3em;
+}
+
+.list-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.list-content ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-weight: 300; /* Reduced font weight */
+  transition: all 0.3s ease; /* Smooth transition for all changes */
+}
+
+.list-content ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f001"; /* Music note icon */
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: antiquewhite;
+  transition: all 0.3s ease; /* Smooth transition for icon changes */
+}
+
+.map-info .map-group .history-list .list-content ul li {
+  transform: scale(1); ***** I used this in my PP5, here you set the baseline, and then in the active class, you increase the size a tiny bit.
+}
+
+.map-info .map-group .history-list .list-content ul li:hover,
+.map-info .map-group .history-list .list-content ul li:focus,
+.map-info .map-group .history-list .list-content ul li:active {
+  color: var(--white);
+}
+
+.map-info .map-group .history-list .list-content ul li:hover::before,
+.map-info .map-group .history-list .list-content ul li:focus::before,
+.map-info .map-group .history-list .list-content ul li:active::before {
+  color: var(--white); /* Change icon color on hover/focus/active */
+}
+
+.map-info .map-group .history-list .list-content ul li:active {
+  transform: scale(1.03);
 }
 
 .life-history {
