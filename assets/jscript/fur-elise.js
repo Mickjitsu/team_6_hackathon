@@ -14,6 +14,7 @@ function furElise(){
         18, 4, 16
     ];
 
+    displayGame(); //prepare window
     setNoteArray(melodyNotes); //convert array values to string that matches data-key
     currentSongNotes = []; //reset global array which game uses to play a composition
 

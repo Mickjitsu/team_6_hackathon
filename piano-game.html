@@ -32,13 +32,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="practice-game.html">Practice</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="piano-game.html">Play</a>
+                            <a class="nav-link active" href="piano-game.html">Play</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="map.html">Map</a>
@@ -81,7 +81,7 @@
             </div>
         </div>
 
-        <canvas id="notedrop-canvas" class="hide" width="980" height="210"></canvas>
+        <canvas id="notedrop-canvas" style="display: none" width="980" height="210"></canvas>
 
         <div id="piano-container" class="hide">
             <div id="white-key-container">
@@ -185,7 +185,7 @@
             </div>
         </div>
 
-        <h2 id="score-display"> SCORE: <span id="user-score"></span></h2>
+        <h2 id="score-display" class="hide"> SCORE: <span id="user-score"></span></h2>
     </main>
 
     <footer class="text-center text-lg-start py-4" id="footer">
