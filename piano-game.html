@@ -32,13 +32,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link active" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="practice-game.html">Practice</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="piano-game.html">Play</a>
+                            <a class="nav-link" href="piano-game.html">Play</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="map.html">Map</a>
@@ -81,9 +81,9 @@
             </div>
         </div>
 
-        <canvas id="notedrop-canvas" width="980" height="210"></canvas>
+        <canvas id="notedrop-canvas" class="hide" width="980" height="210"></canvas>
 
-        <div id="piano-container">
+        <div id="piano-container" class="hide">
             <div id="white-key-container">
                 <div class="white-key" data-key="key01">
                     <span>C</span>
@@ -185,6 +185,7 @@
             </div>
         </div>
 
+        <h2 id="score-display"> SCORE: <span id="user-score"></span></h2>
     </main>
 
     <footer class="text-center text-lg-start py-4" id="footer">
@@ -196,70 +197,6 @@
                     GitHub</a></p>
         </div>
     </footer>
-
-    <!-- Modal -->
-    <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="instructionsModalLabel">Game Instructions</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h6>Keyboard Map Keys</h6>
-                    <p>Use the following keys on your keyboard to play the corresponding notes:</p>
-                    <div class="keyboard-map">
-                        <div class="row">
-                            <div class="key">2<br><span>C#</span></div>
-                            <div class="key">3<br><span>D#</span></div>
-                            <div class="key">5<br><span>F#</span></div>
-                            <div class="key">6<br><span>G#</span></div>
-                            <div class="key">7<br><span>A#</span></div>
-                        </div>
-                        <div class="row">
-                            <div class="key">Q<br><span>C</span></div>
-                            <div class="key">W<br><span>D</span></div>
-                            <div class="key">E<br><span>E</span></div>
-                            <div class="key">R<br><span>F</span></div>
-                            <div class="key">T<br><span>G</span></div>
-                            <div class="key">Y<br><span>A</span></div>
-                            <div class="key">U<br><span>B</span></div>
-                        </div>22
-                        <div class="row">
-                            <div class="key">G<br><span>C#</span></div>
-                            <div class="key">H<br><span>D#</span></div>
-                            <div class="key">K<br><span>F#</span></div>
-                            <div class="key">L<br><span>G#</span></div>
-                            <div class="key">;<br><span>A#</span></div>
-                        </div>
-                        <div class="row">
-                            <div class="key">V<br><span>C</span></div>
-                            <div class="key">B<br><span>D</span></div>
-                            <div class="key">N<br><span>E</span></div>
-                            <div class="key">M<br><span>F</span></div>
-                            <div class="key">,<br><span>G</span></div>
-                            <div class="key">.<br><span>A</span></div>
-                            <div class="key">/<br><span>B</span></div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <hr>
-                <h6>Rules</h6>
-                <ul>
-                    <li>Press the keys for the correct duration to match the notes.</li>
-                    <li>Your goal is to achieve the highest percentage match.</li>
-                    <li>After each round, you'll see your score.</li>
-                    <li>Click the "Play Again" button to restart.</li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Start Playing</button>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
