@@ -59,7 +59,8 @@ function setAllKeys(){
 function displayGame(){
     document.getElementsByClassName("welcome-container")[0].classList.add("hide");
     document.getElementById("piano-container").classList.remove("hide");
-    document.getElementById("notedrop-canvas").classList.remove("hide");
+    document.getElementById("notedrop-canvas").style.display = "";
+    document.getElementById("score-display").classList.remove("hide");
     setAllKeys();
 }
 /**

@@ -9,6 +9,7 @@ function twinkleStar(){
         18, 18, 17, 17, 15, 15, 13
     ];
 
+    displayGame();  //prepare window
     currentSongNotes = []; //reset global array which game uses to play a composition
 
     //compose song and put it into global array
