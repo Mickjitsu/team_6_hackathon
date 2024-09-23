@@ -1,6 +1,6 @@
 # ![logo-dark](./documentation/logo-dark.png) Piano Master
 
-[View the Live Project Here](https://mickjitsu.github.io/team_6_hackathon/)
+[View the Live Project Here](https://mickjitsu.github.io/team_6_hackathon/) <br>
 *(To open in a new window, press "ctrl" (or ⌘ for Mac) + click on the link)*
 
 Welcome to the Piano Master, a fully functioning musical game to improve your piano skills. This project is a collaborative effort by a team of 7 developers, the Challenged Composers, within the scope of Code Institute's Hackathon.
@@ -178,6 +178,8 @@ Dark Mode would be a nice addition to the game but this was beyond the scope of 
 
 ## ![logo-dark-xs](./documentation/logo-dark-xs.png) Testing
 
+##### Manual Testing
+
 | Epic | Title | User Story | Expected Result | Result |
 |---|---|---|---|---|
 | Website Structure | Website Basic Structure | As a user I can view a welcoming homepage so I can easily identify the website's purpose. | Welcoming, clear structured website | Passed |
@@ -195,6 +197,10 @@ Dark Mode would be a nice addition to the game but this was beyond the scope of 
 | User Experience | User Feedback | As a user, I get visual feedback to actions so that I am always informed of the game state. | User feedback for all actions | Passed |
 | User Experience | Web Accessibility | As a user with disabilities or using assistive technologies, I can easily navigate the website so that I can enjoy the website. | Operable: keyboard interface compatible, Distinguishable, e.g., the use of color | Passed |
 | User Experience | Design | As a user I can view a pleasant website design so that can enjoy using it. | The overall design is clean and the color palette is limited to avoid visual clutter | Passed |
+
+##### Validator Testing
+
+
 
 ## ![logo-dark-xs](./documentation/logo-dark-xs.png) Bugs
 
