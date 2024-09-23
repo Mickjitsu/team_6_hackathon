@@ -1,5 +1,7 @@
 # ![logo-dark](./documentation/logo-dark.png) Piano Master
 
+![mockup](/documentation/mockup.png)
+
 [View the Live Project Here](https://mickjitsu.github.io/team_6_hackathon/) <br>
 *(To open in a new window, press "ctrl" (or ⌘ for Mac) + click on the link)*
 
@@ -290,6 +292,10 @@ There are no known bugs in the deployed project.
 - [TinyPNG](https://tinypng.com/) to compress images
 - [Leonardo AI](https://leonardoai.com/) to create images
 - [Coolors.co](https://coolors.co/contrast-checker/ffffff-3d2617) for color contrast checker
+- [Techsini.com](https://techsini.com/multi-mockup/index.php) to create the mockup for this README
+- [World Wide Web Consortium's HTML validator](https://validator.w3.org/) to validate HTML
+- [World Wide Web Consortium's CSS validator](https://validator.w3.org/) to validate CSS
+- [JSHint Validator](https://jshint.com/) to validate JavaScript
 
 ## ![logo-dark-xs](./documentation/logo-dark-xs.png) Deployment
 
