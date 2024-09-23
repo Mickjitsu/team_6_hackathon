@@ -94,6 +94,7 @@ function moveDown(){
             //if note is to be played now (touching bottom of canvas/top of keyboard)
             if (note.y + note.length > ctxElement.height && note.y < ctxElement.height) {
                 temp.style.boxShadow = `0 -3px 15px wheat`;
+                temp.style.borderTop = "2px solid wheat";
                 
                 //if play requested play notes and add effects to autoplayed keys
                 if(playthroughOn){

@@ -291,10 +291,10 @@ a.active {
 
 /* Piano */
 #piano-container {
-  position: relative;
   /* for child elements to use relazive sizing (%) */
-  margin: 0 auto;
+  position: relative;
   /* horizontal middle */
+  margin: 0 auto;
   /* possibly add min and max and make responsive */
   height: 210px;
   width: 980px;
@@ -302,6 +302,7 @@ a.active {
 
 #piano-container div {
   transition: all 300ms;
+  user-select: none;
 }
 
 /* white piano keys as 14 same divs in a row */
@@ -330,9 +331,11 @@ a.active {
 }
 
 .black-key:active {
-  box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2) inset,
+  box-shadow: 0 0 1px 1px inset,
+              0 3px 1px 1px;
+  /*box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.2) inset,
     0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(to right, #444 0%, #222 100%);
+  background: linear-gradient(to right, #444 0%, #222 100%);*/
 }
 
 .correct-key {
