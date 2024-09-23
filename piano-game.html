@@ -74,6 +74,45 @@
                                 <button onclick="furElise()" class="difficulty-btn hard btn btn-red px-3">
                                     Hard
                                 </button>
+
+                                <!-- modal -->
+                                <button type="button" class="btn btn-yellow fs-4 mx-2" data-bs-toggle="modal"
+                                    data-bs-target="#Modal">
+                                    How to Play
+                                </button>
+
+
+                                <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">How To Play
+                                                </h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="modal-text">In Game Mode, you can choose Easy Mode to play
+                                                    "Twinkle Twinkle Little Star" or Hard Mode for "Fur Elise."
+                                                    <br>
+                                                    As you play, you'll watch the notes drop at the correct timing, and
+                                                    your
+                                                    goal is to press the right key as each note reaches the bottom. For
+                                                    every correct key press, you earn 1 point, but if you press the
+                                                    wrong key, you'll lose 1 point. Try to keep your accuracy high and
+                                                    watch your score increase as you improve!
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-light-brown"
+                                                    data-bs-dismiss="modal">Close</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -184,8 +223,21 @@
                 <div class="spacer"></div>
             </div>
         </div>
+        <!-- Score -->
+        <div class="container mt-4 hide" id="score-display">
+            <div class="row">
+                <div class="col-6 text-center">
+                    <button class="btn btn-light-brown">Watch it Play</button>
 
-        <h2 id="score-display" class="hide"> SCORE: <span id="user-score"></span></h2>
+                </div>
+                <div class=" col-6 text-center">
+                    <p> SCORE: <span id="user-score"></span></p>
+                </div>
+            </div>
+        </div>
+
+
+
     </main>
 
     <footer class="text-center text-lg-start py-4" id="footer">
