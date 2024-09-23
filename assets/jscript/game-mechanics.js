@@ -148,3 +148,8 @@ function endGame(){
     document.querySelector("final-screen-max").innerText = toString(currentSongNotes.length);
     document.querySelector("final-screen-score").innerText = toString(userScore);
 }
+
+function enableAutoplay(){
+    if(!playthroughOn) playthroughOn = true;
+    else playthroughOn = false;
+}
