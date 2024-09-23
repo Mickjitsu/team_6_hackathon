@@ -300,7 +300,7 @@ a.active {
   position: relative;
   /* for child elements to use relazive sizing (%) */
   margin: 0 auto;
-  /* horizontal middle, 10% from top */
+  /* horizontal middle */
   /* possibly add min and max and make responsive */
   height: 210px;
   width: 980px;

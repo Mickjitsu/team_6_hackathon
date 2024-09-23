@@ -28,7 +28,8 @@ var blackNotes = []; //to contain
 }
 /**
  * sets "allKeys{}" as 'data-key attribute': x coordinate
- * relative to parent(#piano-container)
+ * relative to parent(#piano-container) then
+ * calls initial song function
  */
 function setAllKeys(){
     let pianoLoc = document.getElementById("piano-container").getBoundingClientRect().x;
@@ -62,13 +63,6 @@ function setNoteArray(array){
     }
 }
 /**
- * returnes width of received note in pixels 
- */
-function noteWidth(checkNote){
-    if (checkNote.isWhite) return 70; //white key width
-    else return 39.73; //black key width
-}
-/**
  * moves down and draws all notes,
  * adds visual effects for note touching
  * keyboard key
@@ -79,12 +73,13 @@ function moveDown(){
 
         //if note is withing canvas draw it
         if (note.y + note.length > 0 && note.y <= ctxElement.height){
+            let temp = document.querySelector(`[data-key=${note.key}]`);
+
             canvas.beginPath();
-            canvas.roundRect(note.x, note.y, noteWidth(note), note.length, 10);
+            canvas.roundRect(note.x, note.y, temp.offsetWidth, note.length, 10);
             canvas.stroke();
             canvas.fill();
             //get note's matching keyboard key div
-            let temp = document.querySelector(`[data-key=${note.key}]`);
 
             //if note is to be played now (touching bottom of canvas/top of keyboard)
             if (note.y + note.length > ctxElement.height && note.y < ctxElement.height) {
