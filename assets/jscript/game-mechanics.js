@@ -132,8 +132,24 @@ function moveDown(){
 
 function drawSong(){
     canvas.clearRect(0, 0, ctxElement.width, ctxElement.height); //clear entire canvas
-    moveDown(); 
+    moveDown();
+    document.getElementById("user-score").innerText = userScore; 
     // if last note didn't pass through canvas repeat this function every frame
     if(currentSongNotes[currentSongNotes.length - 1].y <= ctxElement.height) requestAnimationFrame(drawSong);
-    document.getElementById("user-score").innerText = userScore;
+    else endGame();
+}
+
+function endGame(){
+    document.getElementsByClassName("game-end-container")[0].classList.remove("hidden");
+    document.getElementById("piano-container").classList.add("hide");
+    document.getElementById("notedrop-canvas").style.display = "none";
+    document.getElementById("score-display").classList.add("hide");
+    alert(document.getElementById("final-screen-score"));
+    document.getElementById("final-screen-max").innerText = toString(currentSongNotes.length);
+    document.getElementById("final-screen-score").innerText = toString(userScore);
+}
+
+function enableAutoplay(){
+    if(!playthroughOn) playthroughOn = true;
+    else playthroughOn = false;
 }
