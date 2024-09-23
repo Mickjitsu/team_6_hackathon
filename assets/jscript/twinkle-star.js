@@ -1,4 +1,5 @@
 function twinkleStar(){
+    displayGame();
     //array of twinkle little star notes by number 
     const twinkleStarNotes = [
         13, 13, 20, 20, 22, 22, 20,

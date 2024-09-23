@@ -1,4 +1,5 @@
 function furElise(){
+    displayGame();
     //array of fur Elise notes by number 
     let melodyNotes = [
         23, 22, 23, 22, 23, 18, 21, 19, 4, 16,                                  
