@@ -1,6 +1,6 @@
 # ![logo-dark](./documentation/logo-dark.png) Piano Master
 
-[View the Live Project Here](https://mickjitsu.github.io/team_6_hackathon/)
+[View the Live Project Here](https://mickjitsu.github.io/team_6_hackathon/) <br>
 *(To open in a new window, press "ctrl" (or ⌘ for Mac) + click on the link)*
 
 Welcome to the Piano Master, a fully functioning musical game to improve your piano skills. This project is a collaborative effort by a team of 7 developers, the Challenged Composers, within the scope of Code Institute's Hackathon.
@@ -24,6 +24,8 @@ Welcome to the Piano Master, a fully functioning musical game to improve your pi
   - [Error Pages](#error-pages)
   - [Future Features](#future-features)
 - [Testing](#logo-dark-xs-testing)
+  - [Manual Testing](#manual-testing)
+  - [Automated Testing](#automated-testing)
 - [Bugs](#logo-dark-xs-bugs)
 - [Technologies And Languages](#logo-dark-xs-technologies-and-languages)
   - [Languages Used](#languages-used)
@@ -162,6 +164,30 @@ The user can choose between two difficulty levels: Easy and Hard.
 
 The Game Mode allows users to play a musical game with a piano keyboard. The game provides a fun and engaging way to learn and practice musical skills with validation of the user's performance. The user gets a score based on their performance.
 
+##### User Feedback
+
+The user receives feedback on their performance, encouraging them to play on.
+
+![user-feedback](/documentation/user-feedback.png)
+
+##### Music Map
+
+The user can choose from a list of famous composers and when clicked, the interactive map shows their birthplace and fun facts about the composer.
+
+![feature-map](/documentation/feature-map.png)
+
+![feature-map-info](/documentation/feature-map-info.png)
+
+##### About Us
+
+The About Us page provides information about the team behind the project.
+
+![feature-about](/documentation/feature-about-us.png)
+
+The user can turn the record to view personal information about the team members and how to connect to them on GitHub or LinkedIn.
+
+![feature-about-flipcard](/documentation/feature-about-us-flipcard.png)
+
 ##### Error Pages
 
 The project uses a custom HTML error page for status code 404 (Not Found) for improved user experience. The error page maintains a consistent design with the rest of the website, clearly explains the meaning of the error code in a user-friendly way avoiding technical jargon, and uses clear, concise language. The error page displays a friendly image in line with the website theme to make the error page more visually appealing.
@@ -177,6 +203,8 @@ Dark Mode would be a nice addition to the game but this was beyond the scope of 
 ![future-feature](./documentation/future-feature.png)
 
 ## ![logo-dark-xs](./documentation/logo-dark-xs.png) Testing
+
+##### Manual Testing
 
 | Epic | Title | User Story | Expected Result | Result |
 |---|---|---|---|---|
@@ -195,6 +223,42 @@ Dark Mode would be a nice addition to the game but this was beyond the scope of 
 | User Experience | User Feedback | As a user, I get visual feedback to actions so that I am always informed of the game state. | User feedback for all actions | Passed |
 | User Experience | Web Accessibility | As a user with disabilities or using assistive technologies, I can easily navigate the website so that I can enjoy the website. | Operable: keyboard interface compatible, Distinguishable, e.g., the use of color | Passed |
 | User Experience | Design | As a user I can view a pleasant website design so that can enjoy using it. | The overall design is clean and the color palette is limited to avoid visual clutter | Passed |
+
+##### Automated Testing
+
+All validator testing was performed on the deployed website.
+
+
+##### HTML Validator Testing
+
+The HTML code passed through the [World Wide Web Consortium's validator](https://validator.w3.org/) with no errors.
+
+<details>
+<summary>Click for Image HTML Validator Testing</summary>
+
+![html-validator](/documentation/testing-html.png)
+</details>
+
+##### CSS Validator Testing
+
+No errors were detected when passing through the official [World Wide Web Consortium (W3C) validator](https://validator.w3.org/) for CSS.
+
+<details>
+<summary>Click for Image CSS Validator Testing</summary>
+
+![css-validator](/documentation/testing-css.png)
+</details>
+
+##### JavaScript Validator Testing
+
+The JavaScript passed without errors through the [JSHint Validator](https://jshint.com/), a JavaScript Code Quality Tool.
+
+<details>
+<summary>Click for Image JavaScript Validator Testing</summary>
+
+![js-validator](/documentation/testing-js-piano-game.png)
+</details>
+
 
 ## ![logo-dark-xs](./documentation/logo-dark-xs.png) Bugs
 
@@ -271,13 +335,13 @@ To clone the repository:
 
 ##### Contributors
 
-- Dayana [GitHub](https://github.com/Dayana-N), [LinkedIn](https://www.linkedin.com/in/dayana-nashkova-b46463165/)
-- Damir [GitHub](https://github.com/CorDamir), [LinkedIn](https://www.linkedin.com/in/damir-ćorić-03a166310/)
-- Erin [GitHub](https://github.com/erinvdoyle), [LinkedIn](https://www.linkedin.com/in/erinvdoyle)
-- Gudrun [GitHub](https://github.com/g-omarsdottir), [LinkedIn](http://www.linkedin.com/in/gudrun-omarsdottir)
-- Henna [GitHub](https://github.com/hennasingh), [LinkedIn](http://www.linkedin.com/in/hennasingh), [Website](https://hennasingh.dev/)
-- Michael [GitHub](https://github.com/MickJitsu), [LinkedIn](http://www.linkedin.com/in/michael-m-8818b5194)
-- Vasilis [GitHub](https://github.com/Vasileios20), [LinkedIn](https://www.linkedin.com/in/vasileios-tsimourdagkas/)
+- Dayana Nashkova - [GitHub](https://github.com/Dayana-N), [LinkedIn](https://www.linkedin.com/in/dayana-nashkova-b46463165/)
+- Damir Ćorić - [GitHub](https://github.com/CorDamir), [LinkedIn](https://www.linkedin.com/in/damir-ćorić-03a166310/)
+- Erin Doyle - [GitHub](https://github.com/erinvdoyle), [LinkedIn](https://www.linkedin.com/in/erinvdoyle)
+- Gudrun Omarsdottir - [GitHub](https://github.com/g-omarsdottir), [LinkedIn](http://www.linkedin.com/in/gudrun-omarsdottir)
+- Henna Singh - [GitHub](https://github.com/hennasingh), [LinkedIn](http://www.linkedin.com/in/hennasingh), [Website](https://hennasingh.dev/)
+- Michael M. - [GitHub](https://github.com/MickJitsu), [LinkedIn](http://www.linkedin.com/in/michael-m-8818b5194)
+- Vasilis Tsimourdagkas - [GitHub](https://github.com/Vasileios20), [LinkedIn](https://www.linkedin.com/in/vasileios-tsimourdagkas/)
 
 ##### Acknowledgements
 
