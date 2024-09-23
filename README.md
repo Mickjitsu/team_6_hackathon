@@ -17,8 +17,10 @@ Welcome to the Piano Master, a fully functioning musical game to improve your pi
   - [Fonts](#fonts)
   - [Wireframes](#wireframes)
 - [Agile Methodology](#logo-dark-xs-agile-methodology)
+    - [Kanban Board](#kanban-board)
     - [EPICS(Milestones)](#epics-milestones)
     - [User Stories issues](#user-stories-issues)
+    - [ MoSCoW Prioritization Method](#the-moscow-prioritization-method)
 - [Features](#logo-dark-xs-features)
   - [Navbar](#navbar)
   - [Footer](#footer)
@@ -116,6 +118,10 @@ The wireframes were created using [Canva](https://www.canva.com/).
 ## ![logo-dark-xs](./documentation/logo-dark-xs.png) Agile Methodology
 
 This project utilizes Agile Development Methods to manage development and ensure efficient delivery.
+
+##### Kanban Board
+
+The project's Kanban Board can be viewed [here](https://github.com/users/Mickjitsu/projects/3).
 
 ##### EPICS (Milestones)
 
