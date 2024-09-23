@@ -144,9 +144,8 @@ function endGame(){
     document.getElementById("piano-container").classList.add("hide");
     document.getElementById("notedrop-canvas").style.display = "none";
     document.getElementById("score-display").classList.add("hide");
-    alert(document.getElementById("final-screen-score"));
-    document.getElementById("final-screen-max").innerText = toString(currentSongNotes.length);
-    document.getElementById("final-screen-score").innerText = toString(userScore);
+    document.getElementById("final-screen-max").innerText = currentSongNotes.length;
+    document.getElementById("final-screen-score").innerText = " " + userScore + " "; 
 }
 
 function enableAutoplay(){
