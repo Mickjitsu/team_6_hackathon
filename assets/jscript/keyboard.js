@@ -30,7 +30,7 @@ var keysDown = {}; //track which keys are pressed
 function handleKeyClick() {
     let note = this.getAttribute("data-key");
     
-    let playThis = new Audio(`./assets/sounds/piano-notes/${note}.ogg`);
+    let playThis = new Audio(`./assets/sounds/${currentInstrument}/${note}.ogg`);
     playThis.play();
 
     if (this.classList.contains("black-key")) this.classList.toggle("black-key-active");
@@ -82,6 +82,14 @@ function initialSetup() {
             else element.classList.toggle("white-key-active");
           }
     });
+    
+    document.getElementById('toggle-instrument').addEventListener('click', toggleInstrument);
 }
+
+function toggleInstrument() {
+    currentInstrument = currentInstrument === 'piano-notes' ? 'harpsichord-notes' : 'piano-notes';
+    document.getElementById('toggle-instrument').textContent =
+        currentInstrument === 'piano-notes' ? "Switch to Harpsichord" : "Switch to Piano";
+ }
 
 document.onload = initialSetup();

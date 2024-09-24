@@ -1,5 +1,7 @@
 let userInputArr = [];
 let currentKeyIndex = 0;
+let currentInstrument = 'piano-notes'; 
+
 /* Keys for Twinkle Twinkle Little Star */
 const twinkleKeys = [
   'key13',
@@ -359,7 +361,7 @@ function displayNotes(mode) {
 
 function handleKeyClick(mode) {
   let note = this.getAttribute('data-key');
-  let playThis = new Audio(`./assets/sounds/piano-notes/${note}.ogg`);
+  let playThis = new Audio(`./assets/sounds/${currentInstrument}/${note}.ogg`);
   playThis.play();
 
   if (mode === 'easy') {
@@ -368,6 +370,14 @@ function handleKeyClick(mode) {
     checkKey(note, eliseKeys); // Hard mode: compare with eliseKeys
   }
 }
+
+function toggleInstrumentH() {
+  currentInstrument = currentInstrument === 'piano-notes' ? 'harpsichord-notes' : 'piano-notes';
+  document.getElementById('toggle-instrument-h').textContent =
+      currentInstrument === 'piano-notes' ? "Switch to Harpsichord" : "Switch to Piano";
+}
+
+document.getElementById('toggle-instrument-h').addEventListener('click', toggleInstrumentH);
 
 function initialSetup(mode) {
   displayNotes(mode);
