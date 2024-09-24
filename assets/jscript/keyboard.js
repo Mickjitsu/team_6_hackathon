@@ -88,8 +88,34 @@ function initialSetup() {
 
 function toggleInstrument() {
     currentInstrument = currentInstrument === 'piano-notes' ? 'harpsichord-notes' : 'piano-notes';
+    
+    
     document.getElementById('toggle-instrument').textContent =
         currentInstrument === 'piano-notes' ? "Switch to Harpsichord" : "Switch to Piano";
- }
+
+    
+    const whiteKeys = document.getElementsByClassName('white-key');
+    const blackKeys = document.getElementsByClassName('black-key');
+
+    if (currentInstrument === 'harpsichord-notes') {
+      
+        for (let key of whiteKeys) {
+            key.classList.add('harpsichord');
+        }
+        for (let key of blackKeys) {
+            key.classList.add('harpsichord');
+        }
+    } else {
+        
+        for (let key of whiteKeys) {
+            key.classList.remove('harpsichord');
+        }
+        for (let key of blackKeys) {
+            key.classList.remove('harpsichord');
+        }
+    }
+}
+
+document.getElementById('toggle-instrument').addEventListener('click', toggleInstrument);
 
 document.onload = initialSetup();

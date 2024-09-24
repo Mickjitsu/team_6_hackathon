@@ -1,9 +1,9 @@
-function handleKeyClick() {
+/*function handleKeyClick() {
     let note = this.getAttribute("data-key");
     let playThis = new Audio(`./assets/sounds/harpsichord-notes/${note}.ogg`);
     playThis.play();
-}
-
+} */
+/*
 function initialSetup() {
     let whiteKeys = document.getElementsByClassName("white-key");
     let blackKeys = document.getElementsByClassName("black-key")
@@ -42,7 +42,7 @@ function initialSetup() {
             '0': 'key16', // D# note
             '-': 'key19', // F# note
             '=': 'key21', // G# note
-
+            ';': 'key23' // A# note
         };
 
         let note = keyMap[event.key];
