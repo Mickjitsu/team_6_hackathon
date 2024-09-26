@@ -15,6 +15,8 @@ var playthroughOn = false; //autoplay or not
 var userScore = 0; //score tracking
 var activeNotes = {}; //key: should-currently-be-played
 
+let currentInstrument = 'piano-notes';
+
 /* x - coordinate in canvas
    y - coordinate in canvas
    isWhite - self-explanatory
@@ -86,6 +88,7 @@ function setNoteArray(array){
  * adds visual effects for note touching
  * keyboard key
  */
+
 function moveDown(){
     for(let note of currentSongNotes){
         note.y++; 
@@ -114,8 +117,8 @@ function moveDown(){
                 
                     //play the note during composing
                     if(!note.playThis) {
-                        note.playThis = new Audio(`./assets/sounds/piano-notes/${note.key}.ogg`);
-                        note.playThis.play();
+                        note.playThis = new Audio(`./assets/sounds/${currentInstrument}/${note.key}.ogg`);
+                    note.playThis.play();
                     }
                 }
             }
