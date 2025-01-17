@@ -418,6 +418,14 @@ a.active {
   background-color: var(--white);
 }
 
+.white-key.harpsichord {
+  background-color: #f0e68c; 
+}
+
+.black-key.harpsichord {
+  background-color: #8b4513; 
+}
+
 /* Shadow to active key 
 .white-key:active {
   border-bottom: 1px solid #999;

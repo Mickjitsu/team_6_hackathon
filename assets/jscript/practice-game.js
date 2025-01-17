@@ -1,5 +1,8 @@
 let userInputArr = [];
 let currentKeyIndex = 0;
+let currentInstrument = 'piano-notes'; 
+const audioCache = {};
+
 /* Keys for Twinkle Twinkle Little Star */
 const twinkleKeys = [
   'key13',
@@ -160,7 +163,6 @@ let eliseKeys = [
 
 function checkKey(key, keys) {
   userInputArr.push(key);
-
   let notes = document.querySelectorAll('.notes-span');
   let currentKey = document.querySelector(`[data-key=${key}]`);
   const practiceContainer = document.querySelector('.practice-container');
@@ -359,8 +361,13 @@ function displayNotes(mode) {
 
 function handleKeyClick(mode) {
   let note = this.getAttribute('data-key');
-  let playThis = new Audio(`./assets/sounds/piano-notes/${note}.ogg`);
-  playThis.play();
+
+  if (!audioCache[note]) {
+    audioCache[note] = new Audio(`./assets/sounds/${currentInstrument}/${note}.ogg`);
+}
+
+  audioCache[note].currentTime = 0; // Reset playback position to start
+  audioCache[note].play();
 
   if (mode === 'easy') {
     checkKey(note, twinkleKeys); // Easy mode: compare with twinkleKeys
@@ -368,6 +375,37 @@ function handleKeyClick(mode) {
     checkKey(note, eliseKeys); // Hard mode: compare with eliseKeys
   }
 }
+
+function toggleInstrumentH() {
+  currentInstrument = currentInstrument === 'piano-notes' ? 'harpsichord-notes' : 'piano-notes';
+  for (let key in audioCache) {
+    delete audioCache[key];
+}
+
+document.getElementById('toggle-instrument-h').textContent =
+       currentInstrument === 'piano-notes' ? "Switch to Harpsichord" : "Switch to Piano";
+
+       const whiteKeys = document.getElementsByClassName('white-key');
+       const blackKeys = document.getElementsByClassName('black-key');
+   
+       if (currentInstrument === 'harpsichord-notes') {
+           for (let key of whiteKeys) {
+               key.classList.add('harpsichord'); 
+           }
+           for (let key of blackKeys) {
+               key.classList.add('harpsichord'); 
+           }
+       } else {
+           for (let key of whiteKeys) {
+               key.classList.remove('harpsichord'); 
+           }
+           for (let key of blackKeys) {
+               key.classList.remove('harpsichord'); 
+           }
+       }
+}
+
+document.getElementById('toggle-instrument-h').addEventListener('click', toggleInstrumentH);
 
 function initialSetup(mode) {
   displayNotes(mode);
